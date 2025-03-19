@@ -4,7 +4,7 @@ namespace SYS;
 
 class Error
 {
-    public static function showError($msg, $code, $url = '')
+    public static function showError($msg, $code = 500, $url = '')
     {
         if (empty($url)) {
             $massage = $msg;

@@ -1,8 +1,10 @@
 <?php
 
-include 'SYS/Autoload.php';
+require __DIR__.'/SYS/Autoload.php';
 
 \SYS\Autoload::register();
+
+require __DIR__.'/SYS/Aliases.php';
 
 try {
     $config_routes = \APP\Config\Routes::getConfig();
