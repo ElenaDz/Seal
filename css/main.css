@@ -1,0 +1,17 @@
+ul {
+  list-style-type: none;
+}
+
+.logo {
+  width: 100px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+.carousel .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=main.css.map */
