@@ -43,6 +43,7 @@ use SYS\Views;
 
         <?= $content; ?>
 
+
     </main>
 
     <?= Views::get(__DIR__.'/../Blocks/Footer.php'); ?>
