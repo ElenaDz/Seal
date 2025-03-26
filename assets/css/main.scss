@@ -1,6 +1,23 @@
 header {
   padding: 20px 0 10px;
+  background-color: white;
 }
+
+body {
+  background-color: #f1f1f1;
+}
+
+main {
+
+  .container {
+    margin-top: 15px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
 ul {
   list-style-type:  none;
 }
@@ -63,30 +80,24 @@ i {
   }
 }
 
-footer {
+.wrap_footer {
+  background-image: url("/assets/img/footer.jpg");
 
-  .inner_footer{
-    justify-content: space-between;
+  footer {
 
-    .site_map{
-      width: 46%;
-      display: flex;
-      justify-content: space-around;
-    }
+    .inner_footer{
+      justify-content: space-between;
 
-    .call_back {
-      width: 40%;
+      .site_map{
+        width: 46%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .call_back {
+        width: 40%;
+      }
     }
   }
 }
 
-
-.wrap_card_group {
-  position: absolute;
-
-
-  .card-group {
-
-  }
-
-}

@@ -1,15 +1,21 @@
-<div class="container d-flex">
+<div class="container">
 
-	<div class="w-100 d-flex align-items-center">
+    <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center">
 
-		<img class="logo" src="/assets/img/logo.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+            <img class="logo" src="../../../assets/img/logoHeader.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
 
-	</div>
+        </div>
+        <div>
+            Текст
+        </div>
 
-	<div class="info w-100 d-flex align-items-center">
-		<div>Локация </div>
-		<div>Телефоны, обратный звонок</div>
-		<div><a class="" href="#"><i class="mail bi"></i></a></div>
-	</div>
+        <div class="info d-flex align-items-center">
+            <div>Локация </div>
+            <div>Телефоны, обратный звонок</div>
+            <div><a class="" href="#"><i class="mail bi"></i></a></div>
+        </div>
+    </div>
+
 
 </div>
