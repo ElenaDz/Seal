@@ -101,3 +101,15 @@ i {
   }
 }
 
+.card-group {
+
+  .card:not(:last-child) {
+    margin-right: 10px;
+
+  }
+
+  .card {
+    border: none;
+    border-radius: unset;
+  }
+}

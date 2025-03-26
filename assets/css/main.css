@@ -90,4 +90,12 @@ i {
   width: 40%;
 }
 
+.card-group .card:not(:last-child) {
+  margin-right: 10px;
+}
+.card-group .card {
+  border: none;
+  border-radius: unset;
+}
+
 /*# sourceMappingURL=main.css.map */
