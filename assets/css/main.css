@@ -1,5 +1,5 @@
 header {
-  padding: 20px 0 10px;
+  padding: 20px 0 0 0;
   background-color: white;
 }
 
@@ -35,18 +35,6 @@ i {
   width: 24px;
 }
 
-.basket {
-  height: 30px;
-  width: 30px;
-  background-image: url("/assets/img/basket.svg");
-}
-
-.mail {
-  height: 30px;
-  width: 40px;
-  background-image: url("/assets/img/mail.svg");
-}
-
 .telegram {
   background-image: url("/assets/img/socialmedia/telegram.svg");
 }
@@ -64,9 +52,61 @@ i {
 .info {
   margin-left: 15px;
 }
+.info .location_wrap {
+  text-decoration: none;
+  color: black;
+}
+.info .location_wrap:hover {
+  color: rgb(186, 40, 52);
+}
+.info .mail_wrap, .info .phone_wrap, .info .location_wrap {
+  width: 200px;
+}
+.info .mail_wrap .mail_inner, .info .mail_wrap .phone_inner, .info .mail_wrap .location_inner, .info .phone_wrap .mail_inner, .info .phone_wrap .phone_inner, .info .phone_wrap .location_inner, .info .location_wrap .mail_inner, .info .location_wrap .phone_inner, .info .location_wrap .location_inner {
+  height: 50px;
+  font-size: 13px;
+}
+.info .mail_wrap .mail_inner a, .info .mail_wrap .phone_inner a, .info .mail_wrap .location_inner a, .info .phone_wrap .mail_inner a, .info .phone_wrap .phone_inner a, .info .phone_wrap .location_inner a, .info .location_wrap .mail_inner a, .info .location_wrap .phone_inner a, .info .location_wrap .location_inner a {
+  text-decoration: none;
+  color: black;
+}
+.info .mail_wrap .mail_inner a:hover, .info .mail_wrap .phone_inner a:hover, .info .mail_wrap .location_inner a:hover, .info .phone_wrap .mail_inner a:hover, .info .phone_wrap .phone_inner a:hover, .info .phone_wrap .location_inner a:hover, .info .location_wrap .mail_inner a:hover, .info .location_wrap .phone_inner a:hover, .info .location_wrap .location_inner a:hover {
+  color: rgb(186, 40, 52);
+}
 
 .navbar {
-  background-color: white !important;
+  background-color: rgb(186, 40, 52) !important;
+}
+.navbar .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.navbar .dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+.navbar li a {
+  padding-right: 5px;
+  color: white;
+}
+.navbar li a:focus {
+  color: white;
+}
+.navbar li:hover {
+  background-color: white;
+}
+.navbar li:hover a {
+  color: rgb(186, 40, 52);
+}
+.navbar .nav-link.show {
+  background-color: white;
+  color: rgb(186, 40, 52);
+}
+.navbar .dropdown-menu li a {
+  background-color: white;
+  color: rgb(186, 40, 52);
+}
+.navbar .dropdown-menu li a:hover {
+  background-color: #f1f1f1;
 }
 
 .carousel .carousel-indicators button {
@@ -96,6 +136,13 @@ i {
 .card-group .card {
   border: none;
   border-radius: unset;
+}
+
+.breadcrumb .breadcrumb-item a {
+  color: rgb(186, 40, 52);
+}
+.breadcrumb .active {
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

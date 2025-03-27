@@ -16,7 +16,7 @@ class Index extends _Base
         );
 
         self::showLayout(
-            'Seal',
+            'Техно ЗПУ',
             $content
         );
     }
