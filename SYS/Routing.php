@@ -37,9 +37,10 @@ class Routing
             }
         }
 
-        Error::showError(null, 404, $url);
-
-        exit;
+		throw new \Exception(
+			sprintf('Страница "%s" не найдена', $url),
+			404
+		);
     }
 }
 

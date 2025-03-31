@@ -5,24 +5,23 @@ use SYS\Views;
 
 class Index extends _Base
 {
-    public static function index()
-    {
+	public static function index()
+	{
+		$content = Views::get(
+			__DIR__ . '/../View/Index.php',
+			[
 
-        $content = Views::get(
-            __DIR__ . '/../View/Index.php',
-            [
+			]
+		);
 
-            ]
-        );
+		self::showLayout(
+			'Техно ЗПУ',
+			$content
+		);
+	}
 
-        self::showLayout(
-            'Техно ЗПУ',
-            $content
-        );
-    }
-
-    public static function getUrl(): string
-    {
-        return '/';
-    }
+	public static function getUrl(): string
+	{
+		return '/';
+	}
 }

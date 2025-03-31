@@ -4,20 +4,101 @@ namespace SYS;
 
 class Error
 {
-    public static function showError($msg, $code = 500, $url = '')
+	public static function init()
+	{
+		// Включаем кэширование вывода, чтобы иметь возможность удалить уже отправленное содержание перед выводом ошибки
+		ob_start();
+
+		$error_types =  E_ALL - E_DEPRECATED - E_NOTICE - E_STRICT;
+
+		set_error_handler(
+			function (int $severity , string $message , string $file , int $line ) use ($error_types)
+			{
+				throw new \ErrorException($message, 0, $severity, $file, $line);
+			},
+			$error_types
+		);
+
+
+		register_shutdown_function(
+			function () {
+				$error = error_get_last();
+				if (empty($error)) return;
+
+				$severity = $error['type'];
+
+				$msg = $error['message'];
+
+				$result = preg_match('#(.+) in #', $msg, $matches);
+				if ($result === 1) {
+					$msg = $matches[1];
+				}
+
+				$e = new \ErrorException(
+					$msg,
+					0,
+					$severity,
+					$error['file'],
+					$error['line']
+				);
+
+				self::exceptionHandler($e);
+			}
+		);
+
+		set_exception_handler(
+			function (\Exception $e)
+			{
+				self::exceptionHandler($e);
+			}
+		);
+	}
+
+	private static function exceptionHandler(\Throwable $e)
+	{
+		$msg = $e->getMessage();
+		$code = $e->getCode();
+
+		$e->getFile();
+		$e->getLine();
+
+		if ($code && ($code < 300 || $code >= 600))
+		{
+			$msg = $msg." [code $code]";
+			unset($code);
+		}
+
+		if ($e->getFile()) {
+			$msg = $msg."\r\n".
+				$e->getFile().' on line '.$e->getLine();
+		}
+
+		error_log(
+			(
+			strpos(\PHP_OS, 'WIN') !== false
+				? mb_convert_encoding($msg, 'cp1251', 'utf8')
+				: $msg
+			)
+		);
+
+		self::showError($msg, $code);
+	}
+
+    private static function showError($msg, $code)
     {
-        if (empty($url)) {
-            $massage = $msg;
+		// Очистка вывода, чтобы показывать ошибку
+	    while (ob_get_level() > 0)
+	    {
+		    ob_end_clean();
+	    }
 
-        } else {
-            $massage = "Ошибка ".$code.". Страница ".$url." не найдена";
-        }
+		if ( ! headers_sent($filename, $line)) {
+			header("Content-Type: text/plain");
+		}
 
-        http_response_code($code);
+	    http_response_code($code ?: 500);
 
-        echo $massage;
-
-        exit;
+        echo($msg);
+		exit;
     }
-
 }

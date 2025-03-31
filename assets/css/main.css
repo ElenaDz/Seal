@@ -6,7 +6,7 @@
   color: black;
 }
 .info .location_wrap:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .info .mail_wrap, .info .phone_wrap, .info .location_wrap {
   width: 200px;
@@ -20,11 +20,11 @@
   color: black;
 }
 .info .mail_wrap .mail_inner a:hover, .info .mail_wrap .phone_inner a:hover, .info .mail_wrap .location_inner a:hover, .info .phone_wrap .mail_inner a:hover, .info .phone_wrap .phone_inner a:hover, .info .phone_wrap .location_inner a:hover, .info .location_wrap .mail_inner a:hover, .info .location_wrap .phone_inner a:hover, .info .location_wrap .location_inner a:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 
 .navbar {
-  background-color: rgb(186, 40, 52) !important;
+  background-color: #ba2834 !important;
 }
 .navbar .dropdown:hover > .dropdown-menu {
   display: block;
@@ -44,15 +44,15 @@
   background-color: white;
 }
 .navbar li:hover a {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .nav-link.show {
   background-color: white;
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .dropdown-menu li a {
   background-color: white;
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .dropdown-menu li a:hover {
   background-color: #f1f1f1;
@@ -88,7 +88,7 @@
 }
 
 .breadcrumb .breadcrumb-item a {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .breadcrumb .active {
   color: black;
@@ -171,7 +171,7 @@ i {
   color: black;
 }
 .location_wrap:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 
 .mail_wrap, .phone_wrap, .location_wrap {
@@ -186,7 +186,7 @@ i {
   color: black;
 }
 .mail_wrap .mail_inner a:hover, .mail_wrap .phone_inner a:hover, .mail_wrap .location_inner a:hover, .phone_wrap .mail_inner a:hover, .phone_wrap .phone_inner a:hover, .phone_wrap .location_inner a:hover, .location_wrap .mail_inner a:hover, .location_wrap .phone_inner a:hover, .location_wrap .location_inner a:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 
 footer .mail_wrap .mail_inner a, footer .mail_wrap .phone_inner a, footer .mail_wrap .location_inner a, footer .phone_wrap .mail_inner a, footer .phone_wrap .phone_inner a, footer .phone_wrap .location_inner a, footer .location_wrap .mail_inner a, footer .location_wrap .phone_inner a, footer .location_wrap .location_inner a {
@@ -194,11 +194,11 @@ footer .mail_wrap .mail_inner a, footer .mail_wrap .phone_inner a, footer .mail_
   color: white;
 }
 footer .mail_wrap .mail_inner a:hover, footer .mail_wrap .phone_inner a:hover, footer .mail_wrap .location_inner a:hover, footer .phone_wrap .mail_inner a:hover, footer .phone_wrap .phone_inner a:hover, footer .phone_wrap .location_inner a:hover, footer .location_wrap .mail_inner a:hover, footer .location_wrap .phone_inner a:hover, footer .location_wrap .location_inner a:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 
 .navbar {
-  background-color: rgb(186, 40, 52) !important;
+  background-color: #ba2834 !important;
 }
 .navbar .dropdown:hover > .dropdown-menu {
   display: block;
@@ -218,15 +218,15 @@ footer .mail_wrap .mail_inner a:hover, footer .mail_wrap .phone_inner a:hover, f
   background-color: white;
 }
 .navbar li:hover a {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .nav-link.show {
   background-color: white;
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .dropdown-menu li a {
   background-color: white;
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .dropdown-menu li a:hover {
   background-color: #f1f1f1;
@@ -274,10 +274,8 @@ footer .mail_wrap .mail_inner a:hover, footer .mail_wrap .phone_inner a:hover, f
 }
 
 .breadcrumb .breadcrumb-item a {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .breadcrumb .active {
   color: black;
 }
-
-/*# sourceMappingURL=main.css.map */
