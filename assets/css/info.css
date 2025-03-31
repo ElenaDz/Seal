@@ -6,7 +6,7 @@
   color: black;
 }
 .info .location_wrap:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .info .mail_wrap, .info .phone_wrap, .info .location_wrap {
   width: 200px;
@@ -20,7 +20,7 @@
   color: black;
 }
 .info .mail_wrap .mail_inner a:hover, .info .mail_wrap .phone_inner a:hover, .info .mail_wrap .location_inner a:hover, .info .phone_wrap .mail_inner a:hover, .info .phone_wrap .phone_inner a:hover, .info .phone_wrap .location_inner a:hover, .info .location_wrap .mail_inner a:hover, .info .location_wrap .phone_inner a:hover, .info .location_wrap .location_inner a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 
 /*# sourceMappingURL=info.css.map */

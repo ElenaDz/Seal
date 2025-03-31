@@ -1,6 +1,8 @@
 .breadcrumb .breadcrumb-item a {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .breadcrumb .active {
   color: black;
 }
+
+/*# sourceMappingURL=breadcrumb.css.map */

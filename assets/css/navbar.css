@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #ba2834 !important;
+  background-color: rgb(186, 40, 52) !important;
 }
 .navbar .dropdown:hover > .dropdown-menu {
   display: block;
@@ -19,15 +19,15 @@
   background-color: white;
 }
 .navbar li:hover a {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .nav-link.show {
   background-color: white;
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .dropdown-menu li a {
   background-color: white;
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .dropdown-menu li a:hover {
   background-color: #f1f1f1;
