@@ -1,54 +1,3 @@
-header {
-  padding: 20px 0 0 0;
-  background-color: white;
-}
-
-body {
-  background-color: #f1f1f1;
-}
-
-main .container {
-  margin-top: 15px;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.logo {
-  width: 100px;
-  height: 42px;
-  margin-right: 10px;
-}
-
-i {
-  display: block;
-  background-repeat: no-repeat;
-}
-
-.social_icon {
-  height: 24px;
-  width: 24px;
-}
-
-.telegram {
-  background-image: url("/assets/img/socialmedia/telegram.svg");
-}
-.telegram:hover {
-  background-image: url("/assets/img/socialmedia/telegram-blue.svg");
-}
-
-.whatsapp {
-  background-image: url("/assets/img/socialmedia/whatsapp.svg");
-}
-.whatsapp:hover {
-  background-image: url("/assets/img/socialmedia/whatsapp_green.svg");
-}
-
 .info {
   margin-left: 15px;
 }
@@ -57,7 +6,7 @@ i {
   color: black;
 }
 .info .location_wrap:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .info .mail_wrap, .info .phone_wrap, .info .location_wrap {
   width: 200px;
@@ -71,11 +20,11 @@ i {
   color: black;
 }
 .info .mail_wrap .mail_inner a:hover, .info .mail_wrap .phone_inner a:hover, .info .mail_wrap .location_inner a:hover, .info .phone_wrap .mail_inner a:hover, .info .phone_wrap .phone_inner a:hover, .info .phone_wrap .location_inner a:hover, .info .location_wrap .mail_inner a:hover, .info .location_wrap .phone_inner a:hover, .info .location_wrap .location_inner a:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 
 .navbar {
-  background-color: rgb(186, 40, 52) !important;
+  background-color: #ba2834 !important;
 }
 .navbar .dropdown:hover > .dropdown-menu {
   display: block;
@@ -95,15 +44,15 @@ i {
   background-color: white;
 }
 .navbar li:hover a {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .nav-link.show {
   background-color: white;
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .dropdown-menu li a {
   background-color: white;
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .dropdown-menu li a:hover {
   background-color: #f1f1f1;
@@ -139,10 +88,57 @@ i {
 }
 
 .breadcrumb .breadcrumb-item a {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .breadcrumb .active {
   color: black;
 }
 
-/*# sourceMappingURL=main.css.map */
+.social_icon {
+  height: 24px;
+  width: 24px;
+}
+.social_icon.telegram {
+  background-image: url("/assets/img/socialmedia/telegram.svg");
+}
+.social_icon.telegram:hover {
+  background-image: url("/assets/img/socialmedia/telegram-blue.svg");
+}
+.social_icon.whatsapp {
+  background-image: url("/assets/img/socialmedia/whatsapp.svg");
+}
+.social_icon.whatsapp:hover {
+  background-image: url("/assets/img/socialmedia/whatsapp_green.svg");
+}
+
+header {
+  padding: 20px 0 0 0;
+  background-color: white;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+main .container {
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.logo {
+  width: 100px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+i {
+  display: block;
+  background-repeat: no-repeat;
+}

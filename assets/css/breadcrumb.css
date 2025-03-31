@@ -1,0 +1,6 @@
+.breadcrumb .breadcrumb-item a {
+  color: #ba2834;
+}
+.breadcrumb .active {
+  color: black;
+}

@@ -1,0 +1,21 @@
+
+.wrap_footer {
+  background-image: url("/assets/img/footer.jpg");
+
+  footer {
+
+    .inner_footer{
+      justify-content: space-between;
+
+      .site_map{
+        width: 46%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .call_back {
+        width: 40%;
+      }
+    }
+  }
+}

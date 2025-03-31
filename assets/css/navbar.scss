@@ -1,0 +1,52 @@
+
+.navbar {
+  background-color: rgb(186, 40, 52) !important;
+
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+  }
+
+  li {
+
+    a {
+      padding-right: 5px;
+      color: white;
+
+      &:focus {
+        color: white;
+      }
+    }
+
+    &:hover {
+      background-color: white;
+
+      a {
+        color: rgb(186, 40, 52);
+      }
+    }
+  }
+
+  .nav-link.show {
+    background-color: white;
+    color: rgb(186, 40, 52);
+  }
+
+  .dropdown-menu {
+    li {
+      a {
+        background-color: white;
+        color: rgb(186, 40, 52);
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+
+    }
+  }
+}

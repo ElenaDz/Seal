@@ -1,0 +1,32 @@
+
+.info {
+  margin-left: 15px;
+
+
+  .location_wrap {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: rgb(186, 40, 52);
+    }
+  }
+
+  .mail_wrap, .phone_wrap, .location_wrap{
+    width: 200px;
+
+    .mail_inner, .phone_inner, .location_inner{
+      height: 50px;
+      font-size: 13px;
+
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          color: rgb(186, 40, 52);
+        }
+      }
+    }
+  }
+}

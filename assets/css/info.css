@@ -1,0 +1,26 @@
+.info {
+  margin-left: 15px;
+}
+.info .location_wrap {
+  text-decoration: none;
+  color: black;
+}
+.info .location_wrap:hover {
+  color: #ba2834;
+}
+.info .mail_wrap, .info .phone_wrap, .info .location_wrap {
+  width: 200px;
+}
+.info .mail_wrap .mail_inner, .info .mail_wrap .phone_inner, .info .mail_wrap .location_inner, .info .phone_wrap .mail_inner, .info .phone_wrap .phone_inner, .info .phone_wrap .location_inner, .info .location_wrap .mail_inner, .info .location_wrap .phone_inner, .info .location_wrap .location_inner {
+  height: 50px;
+  font-size: 13px;
+}
+.info .mail_wrap .mail_inner a, .info .mail_wrap .phone_inner a, .info .mail_wrap .location_inner a, .info .phone_wrap .mail_inner a, .info .phone_wrap .phone_inner a, .info .phone_wrap .location_inner a, .info .location_wrap .mail_inner a, .info .location_wrap .phone_inner a, .info .location_wrap .location_inner a {
+  text-decoration: none;
+  color: black;
+}
+.info .mail_wrap .mail_inner a:hover, .info .mail_wrap .phone_inner a:hover, .info .mail_wrap .location_inner a:hover, .info .phone_wrap .mail_inner a:hover, .info .phone_wrap .phone_inner a:hover, .info .phone_wrap .location_inner a:hover, .info .location_wrap .mail_inner a:hover, .info .location_wrap .phone_inner a:hover, .info .location_wrap .location_inner a:hover {
+  color: #ba2834;
+}
+
+/*# sourceMappingURL=info.css.map */

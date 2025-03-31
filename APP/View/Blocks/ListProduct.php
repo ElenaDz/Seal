@@ -2,7 +2,7 @@
     <div class="container">
         <div class="">
             <div class="card-group">
-<!--                Каждая карточкка это ссылка на страницу товара-->
+                <!-- Каждая карточкка это ссылка на страницу товара-->
                 <div class="card shadow p-3 mb-5 bg-white rounded">
                     <img src="/assets/img/seal/tp350-01.jpg" class="card-img-top" alt="tp350-01">
                     <div class="card-body">

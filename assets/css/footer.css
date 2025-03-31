@@ -1,0 +1,16 @@
+.wrap_footer {
+  background-image: url("/assets/img/footer.jpg");
+}
+.wrap_footer footer .inner_footer {
+  justify-content: space-between;
+}
+.wrap_footer footer .inner_footer .site_map {
+  width: 46%;
+  display: flex;
+  justify-content: space-around;
+}
+.wrap_footer footer .inner_footer .call_back {
+  width: 40%;
+}
+
+/*# sourceMappingURL=footer.css.map */

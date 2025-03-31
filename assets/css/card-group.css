@@ -1,0 +1,9 @@
+.card-group .card:not(:last-child) {
+  margin-right: 10px;
+}
+.card-group .card {
+  border: none;
+  border-radius: unset;
+}
+
+/*# sourceMappingURL=card-group.css.map */
