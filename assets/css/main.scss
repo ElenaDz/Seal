@@ -41,4 +41,20 @@ i {
   background-repeat: no-repeat;
 }
 
+.slogan {
+  display: flex;
+  justify-content: center;
 
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .slogan {
+    p {
+      display: none;
+    }
+
+    width: 50px;
+    background-image: url("/assets/img/slogan.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}

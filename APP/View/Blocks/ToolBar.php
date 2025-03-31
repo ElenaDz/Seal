@@ -7,11 +7,12 @@
             <img class="logo" src="../../../assets/img/logoHeader.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
 
         </div>
+        <div class="slogan">
+            <p>
+                Есть вещи, которые нельзя купить,<br> для всего остального есть Mastercard
+            </p>
 
-        <div>
-            Текст
         </div>
-
         <div class="info d-flex align-items-center">
 
             <div>
@@ -48,5 +49,7 @@
         </div>
 
     </div>
+
+
 
 </div>
