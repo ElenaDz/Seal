@@ -1,16 +1,19 @@
 <div class="container">
 
     <div class="d-flex mb-2 justify-content-between">
-        <div class="d-flex align-items-center">
 
+        <div class="d-flex align-items-center">
+            <!-- fixme ты выбрала "минус" в качестве пробелов в именах файлов картинок, придерживайся этого во всех картинках -->
             <img class="logo" src="../../../assets/img/logoHeader.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
 
         </div>
+
         <div>
             Текст
         </div>
 
         <div class="info d-flex align-items-center">
+
             <div>
                 <a class="location_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center" href="#">
                     <div class="col-2 p-0"><img class="img-fluid" src="/assets/img/location.svg" alt=""></div>
@@ -19,6 +22,7 @@
                     </div>
                 </a>
             </div>
+
             <div class="phone_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center">
                 <div class="col-2 p-0"><img src="/assets/img/mphone.svg" class="top-icon" alt=""></div>
                 <div class="phone_inner col-10 ps-1 pe-0 font08">
@@ -28,6 +32,7 @@
                     <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">заказать звонок</a>
                 </div>
             </div>
+
             <div class="mail_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center">
                 <div class="col-2 p-0"><img src="/assets/img/mail.svg" class="top-icon" alt="mail"></div>
                 <div class="mail_inner col-10 ps-1 pe-0 font08">
@@ -39,8 +44,9 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
 
+        </div>
+
+    </div>
 
 </div>
