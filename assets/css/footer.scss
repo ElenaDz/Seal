@@ -4,6 +4,21 @@
 
   footer {
 
+    .mail_wrap, .phone_wrap, .location_wrap{
+
+      .mail_inner, .phone_inner, .location_inner{
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            color: rgb(186, 40, 52);
+          }
+        }
+      }
+    }
+
     .inner_footer{
       justify-content: space-between;
 
@@ -17,5 +32,23 @@
         width: 40%;
       }
     }
+
+    .telegram {
+      background-image: url("/assets/img/socialmedia/telegramWhite.svg");
+
+      &:hover {
+        background-image: url("/assets/img/socialmedia/telegram-blue.svg");
+      }
+    }
+
+    .whatsapp {
+      background-image: url("/assets/img/socialmedia/whatsappWhite.svg");
+
+      &:hover {
+        background-image: url("/assets/img/socialmedia/whatsapp_green.svg");
+      }
+    }
   }
 }
+
+
