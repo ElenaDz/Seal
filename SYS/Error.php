@@ -1,5 +1,4 @@
 <?php
-
 namespace SYS;
 
 class Error
@@ -10,6 +9,8 @@ class Error
 		ob_start();
 
 		$error_types =  E_ALL - E_DEPRECATED - E_NOTICE - E_STRICT;
+
+		error_reporting($error_types);
 
 		set_error_handler(
 			function (int $severity , string $message , string $file , int $line ) use ($error_types)
@@ -25,7 +26,10 @@ class Error
 				$error = error_get_last();
 				if (empty($error)) return;
 
+				error_clear_last();
+
 				$severity = $error['type'];
+				if ( ! self::inErrorReporting($severity)) return;
 
 				$msg = $error['message'];
 
@@ -47,7 +51,7 @@ class Error
 		);
 
 		set_exception_handler(
-			function (\Exception $e)
+			function (\Throwable $e)
 			{
 				self::exceptionHandler($e);
 			}
@@ -84,21 +88,26 @@ class Error
 		self::showError($msg, $code);
 	}
 
+	private static function inErrorReporting($severity)
+	{
+		return ! empty($severity & error_reporting());
+	}
+
     private static function showError($msg, $code)
     {
-		// Очистка вывода, чтобы показывать ошибку
+	    // Очистка вывода, чтобы показывать ошибку
 	    while (ob_get_level() > 0)
 	    {
 		    ob_end_clean();
 	    }
 
-		if ( ! headers_sent($filename, $line)) {
-			header("Content-Type: text/plain");
-		}
+	    if ( ! headers_sent($filename, $line)) {
+	        header("Content-Type: text/plain");
+	    }
 
 	    http_response_code($code ?: 500);
 
-        echo($msg);
+	    echo($msg);
 		exit;
     }
 }

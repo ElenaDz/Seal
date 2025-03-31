@@ -5,7 +5,7 @@ use SYS\Views;
 
 class Index extends _Base
 {
-	public static function index()
+	public function __invoke()
 	{
 		$content = Views::get(
 			__DIR__ . '/../View/Index.php',
@@ -14,7 +14,7 @@ class Index extends _Base
 			]
 		);
 
-		self::showLayout(
+		self::showLayoutMain(
 			'Техно ЗПУ',
 			$content
 		);

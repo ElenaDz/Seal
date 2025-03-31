@@ -7,7 +7,7 @@
   color: black;
 }
 .location_wrap:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 
 .mail_wrap, .phone_wrap, .location_wrap {
@@ -22,11 +22,11 @@
   color: black;
 }
 .mail_wrap .mail_inner a:hover, .mail_wrap .phone_inner a:hover, .mail_wrap .location_inner a:hover, .phone_wrap .mail_inner a:hover, .phone_wrap .phone_inner a:hover, .phone_wrap .location_inner a:hover, .location_wrap .mail_inner a:hover, .location_wrap .phone_inner a:hover, .location_wrap .location_inner a:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 
 .navbar {
-  background-color: rgb(186, 40, 52) !important;
+  background-color: #ba2834 !important;
 }
 .navbar .dropdown:hover > .dropdown-menu {
   display: block;
@@ -46,15 +46,15 @@
   background-color: white;
 }
 .navbar li:hover a {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .nav-link.show {
   background-color: white;
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .dropdown-menu li a {
   background-color: white;
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .navbar .dropdown-menu li a:hover {
   background-color: #f1f1f1;
@@ -74,7 +74,7 @@
   color: white;
 }
 .wrap_footer footer .mail_wrap .mail_inner a:hover, .wrap_footer footer .mail_wrap .phone_inner a:hover, .wrap_footer footer .mail_wrap .location_inner a:hover, .wrap_footer footer .phone_wrap .mail_inner a:hover, .wrap_footer footer .phone_wrap .phone_inner a:hover, .wrap_footer footer .phone_wrap .location_inner a:hover, .wrap_footer footer .location_wrap .mail_inner a:hover, .wrap_footer footer .location_wrap .phone_inner a:hover, .wrap_footer footer .location_wrap .location_inner a:hover {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .wrap_footer footer .inner_footer {
   justify-content: space-between;
@@ -109,7 +109,7 @@
 }
 
 .breadcrumb .breadcrumb-item a {
-  color: rgb(186, 40, 52);
+  color: #ba2834;
 }
 .breadcrumb .active {
   color: black;
@@ -180,5 +180,3 @@ i {
     display: none;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

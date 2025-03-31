@@ -1,12 +1,11 @@
 <?php
-
 namespace SYS;
 
 class Views
 {
     public static function get($__file_path, $__data = [])
     {
-        extract($__data);
+        extract((array) $__data);
 
         unset($__data);
 

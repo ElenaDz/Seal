@@ -1,5 +1,6 @@
 <?php
 namespace SYS;
+
 class Routing
 {
     private $config;
@@ -19,19 +20,21 @@ class Routing
 
             $pattern = $url_config[0];
 
-            $reg_ext = $pattern === '' ? '#/#' : "#/$pattern#u";
+            $reg_ext = $pattern === '' ? '#/#' : "#$pattern#u";
 
             $result = preg_match($reg_ext, $url, $matches);
 
             if ($result === 1 && $matches[0] === $url) {
 
-                $method = $url_config[1];
+                $class_name = $url_config[1];
 
                 unset($matches[0]);
 
-                $params = $matches;
+	            $params = $matches;
 
-                call_user_func_array($method, $params);
+	            $action = new $class_name();
+
+	            $action(... $params);
 
                 return;
             }
