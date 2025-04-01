@@ -26,17 +26,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `login` varchar(50) NOT NULL,
   `hash` varchar(60) NOT NULL,
   `permissions` enum('user','manager','admin') NOT NULL DEFAULT 'user',
-  `token` varchar(50) DEFAULT NULL,
+  `token` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `login` (`login`),
   UNIQUE KEY `token` (`token`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы seal.users: 1 rows
+-- Дамп данных таблицы seal.users: 0 rows
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `login`, `hash`, `permissions`, `token`) VALUES
-	(2, 'test', '$2y$10$EhPYR7rD7lDxvya/XMTMvef3eL3GtecY7a8mCbIY0ah1zqBpYPNrC', 'user', NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
