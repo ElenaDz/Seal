@@ -1,15 +1,15 @@
 <div class="container">
 
-    <div class="d-flex mb-2 justify-content-between">
+    <div class="d-flex mb-3 justify-content-between">
 
         <div class="d-flex align-items-center">
             <!-- fixme ты выбрала "минус" в качестве пробелов в именах файлов картинок, придерживайся этого во всех картинках -->
-            <img class="logo" src="../../../assets/img/logoHeader.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+            <img class="logo" src="../../../assets/img/logo/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
 
         </div>
         <div class="slogan">
             <p>
-                Есть вещи, которые нельзя купить,<br> для всего остального есть Mastercard
+                Мы заботимся, о сохраности вашего груза
             </p>
 
         </div>

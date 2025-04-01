@@ -58,7 +58,7 @@
 
             </div>
             <div class="">
-                <img class="logo" src="/assets/img/logo.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                <img class="logo" src="../../../assets/img/logo/logo-white.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
             </div>
 
 

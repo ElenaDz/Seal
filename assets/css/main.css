@@ -7,7 +7,7 @@
   color: black;
 }
 .location_wrap:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 
 .mail_wrap, .phone_wrap, .location_wrap {
@@ -22,11 +22,11 @@
   color: black;
 }
 .mail_wrap .mail_inner a:hover, .mail_wrap .phone_inner a:hover, .mail_wrap .location_inner a:hover, .phone_wrap .mail_inner a:hover, .phone_wrap .phone_inner a:hover, .phone_wrap .location_inner a:hover, .location_wrap .mail_inner a:hover, .location_wrap .phone_inner a:hover, .location_wrap .location_inner a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 
 .navbar {
-  background-color: #ba2834 !important;
+  background-color: rgb(186, 40, 52) !important;
 }
 .navbar .dropdown:hover > .dropdown-menu {
   display: block;
@@ -46,15 +46,15 @@
   background-color: white;
 }
 .navbar li:hover a {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .nav-link.show {
   background-color: white;
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .dropdown-menu li a {
   background-color: white;
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .dropdown-menu li a:hover {
   background-color: #f1f1f1;
@@ -74,7 +74,7 @@
   color: white;
 }
 .wrap_footer footer .mail_wrap .mail_inner a:hover, .wrap_footer footer .mail_wrap .phone_inner a:hover, .wrap_footer footer .mail_wrap .location_inner a:hover, .wrap_footer footer .phone_wrap .mail_inner a:hover, .wrap_footer footer .phone_wrap .phone_inner a:hover, .wrap_footer footer .phone_wrap .location_inner a:hover, .wrap_footer footer .location_wrap .mail_inner a:hover, .wrap_footer footer .location_wrap .phone_inner a:hover, .wrap_footer footer .location_wrap .location_inner a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .wrap_footer footer .inner_footer {
   justify-content: space-between;
@@ -88,13 +88,13 @@
   width: 40%;
 }
 .wrap_footer footer .telegram {
-  background-image: url("/assets/img/socialmedia/telegramWhite.svg");
+  background-image: url("/assets/img/socialmedia/telegram-white.svg");
 }
 .wrap_footer footer .telegram:hover {
   background-image: url("/assets/img/socialmedia/telegram-blue.svg");
 }
 .wrap_footer footer .whatsapp {
-  background-image: url("/assets/img/socialmedia/whatsappWhite.svg");
+  background-image: url("/assets/img/socialmedia/whatsapp-white.svg");
 }
 .wrap_footer footer .whatsapp:hover {
   background-image: url("/assets/img/socialmedia/whatsapp_green.svg");
@@ -109,7 +109,7 @@
 }
 
 .breadcrumb .breadcrumb-item a {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .breadcrumb .active {
   color: black;
@@ -154,8 +154,8 @@ ul {
 }
 
 .logo {
-  width: 100px;
-  height: 42px;
+  width: 130px;
+  height: 50px;
   margin-right: 10px;
 }
 
@@ -167,6 +167,10 @@ i {
 .slogan {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.slogan p {
+  margin: 0;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -180,3 +184,5 @@ i {
     display: none;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
