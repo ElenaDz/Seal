@@ -8,9 +8,6 @@ class Index extends _Base
 {
 	public function __invoke()
 	{
-		var_dump(Auth::isManager());
-		exit;
-
 		$content = Views::get(
 			__DIR__ . '/../View/Index.php',
 			[
