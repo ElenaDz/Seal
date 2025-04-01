@@ -2,6 +2,7 @@
 namespace APP\Action;
 
 use APP\Service\Auth;
+use SYS\Response;
 use SYS\Views;
 
 class UserLogin extends _Base
@@ -12,6 +13,10 @@ class UserLogin extends _Base
 
 	public function __invoke()
 	{
+		if (Auth::isAuthorized()) {
+			Response::redirect(User::getUrl());
+		}
+
 		$errors = [];
 		if ($_POST[self::POST_NAME_SUBMIT])
 		{
@@ -20,6 +25,8 @@ class UserLogin extends _Base
 
 			try {
 				Auth::logon($login, $pass);
+
+				Response::redirect(User::getUrl());
 
 			} catch (\DomainException $exception) {
 				$errors[self::POST_NAME_SUBMIT] = $exception->getMessage();

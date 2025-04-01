@@ -1,6 +1,7 @@
 <?php
 namespace APP\Entity;
 
+use APP\Model\UserPermissions;
 use APP\Service\Auth;
 
 class User
@@ -25,14 +26,35 @@ class User
 		return $this->login;
 	}
 
-	public function passVerify($pass): bool
+	public function verifyPass($pass): bool
 	{
 		return Auth::passwordVerify($pass, $this->hash);
+	}
+
+
+	public function getPermissions()
+	{
+		return $this->permissions;
+	}
+
+	public function isAdmin(): bool
+	{
+		return UserPermissions::getWeight($this->permissions) >= UserPermissions::getWeight(UserPermissions::ADMIN);
+	}
+
+	public function isManager(): bool
+	{
+		return UserPermissions::getWeight($this->permissions) >= UserPermissions::getWeight(UserPermissions::MANAGER);
 	}
 
 	public function createToken()
 	{
 		$this->token = md5(uniqid('', true));
+	}
+
+	public function getToken(): string
+	{
+		return $this->token;
 	}
 
 	public function resetToken()
@@ -42,6 +64,6 @@ class User
 
 	public function save()
 	{
-		\APP\Model\User::save($this);
+		\APP\Model\Users::save($this);
 	}
 }

@@ -4,6 +4,7 @@ namespace APP\Config;
 use APP\Action\Index;
 use APP\Action\User;
 use APP\Action\UserLogin;
+use APP\Action\UserLogout;
 use APP\Action\UserReg;
 
 class Routes
@@ -22,6 +23,10 @@ class Routes
 	        [
 		        UserLogin::getUrl(),
 		        UserLogin::class
+	        ],
+	        [
+		        UserLogout::getUrl(),
+		        UserLogout::class
 	        ],
 	        [
 		        UserReg::getUrl(),

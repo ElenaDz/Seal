@@ -2,6 +2,7 @@
 namespace APP\Action;
 
 use APP\Service\Auth;
+use SYS\Response;
 use SYS\Views;
 
 class UserReg extends _Base
@@ -19,13 +20,16 @@ class UserReg extends _Base
 			$login = $_POST[self::POST_NAME_LOGIN];
 			$pass = $_POST[self::POST_NAME_PASS];
 
-			$user = \APP\Model\User::getByLogin($login);
+			$user = \APP\Model\Users::getByLogin($login);
 			if ( ! empty($user)) {
 				$errors[self::POST_NAME_LOGIN] = 'Уже занят';
 			}
 
-			if (empty($errors)) {
-				\APP\Model\User::add($login, $pass);
+			if (empty($errors))
+			{
+				\APP\Model\Users::add($login, $pass);
+
+				Response::redirect(UserLogin::getUrl());
 			}
 		}
 

@@ -1,13 +1,14 @@
 <?php
 namespace APP\Model;
 
+use APP\Entity\User;
 use APP\Service\Auth;
 
-class User extends _Base
+class Users extends _Base
 {
 	/**
 	 * @param $id
-	 * @return \APP\Entity\User|false
+	 * @return User|false
 	 */
 	public static function getById($id)
 	{
@@ -16,14 +17,14 @@ class User extends _Base
 		);
 
 		return $results->fetchObject(
-			\APP\Entity\User::class
+			User::class
 		);
 	}
 
 
 	/**
 	 * @param $login
-	 * @return \APP\Entity\User|false
+	 * @return User|false
 	 */
 	public static function getByLogin($login)
 	{
@@ -38,13 +39,46 @@ class User extends _Base
 		]);
 
 		return $results->fetchObject(
-			\APP\Entity\User::class
+			User::class
 		);
 	}
 
+	/**
+	 * @param $token
+	 * @return User|false
+	 */
 	public static function getByToken($token)
 	{
+		$pdo = self::getPDO();
 
+		$results = $pdo->prepare(
+			'SELECT * FROM users WHERE token=:token'
+		);
+
+		$results->execute([
+			'token' => $token
+		]);
+
+		return $results->fetchObject(
+			User::class
+		);
+	}
+
+	/**
+	 * @return User[]
+	 */
+	public static function getAll()
+	{
+		$pdo = self::getPDO();
+
+		$results = $pdo->query(
+			'SELECT * FROM users'
+		);
+
+		return $results->fetchAll(
+			\PDO::FETCH_CLASS,
+			User::class
+		);
 	}
 
 	public static function add($login, $pass, $permissions = UserPermissions::USER): int
@@ -80,7 +114,7 @@ class User extends _Base
 		return self::getPDO()->lastInsertId();
 	}
 
-	public static function save(\APP\Entity\User $user)
+	public static function save(User $user)
 	{
 		if (
 				empty($user->getId())
@@ -120,9 +154,9 @@ class User extends _Base
 
 		$ref_user = new \ReflectionClass($user);
 
-		$prop_hash = $ref_user->getProperty(\APP\Entity\User::NAME_HASH);
-		$prop_permissions = $ref_user->getProperty(\APP\Entity\User::NAME_PERMISSIONS);
-		$prop_token = $ref_user->getProperty(\APP\Entity\User::NAME_TOKEN);
+		$prop_hash = $ref_user->getProperty(User::NAME_HASH);
+		$prop_permissions = $ref_user->getProperty(User::NAME_PERMISSIONS);
+		$prop_token = $ref_user->getProperty(User::NAME_TOKEN);
 
 		$prop_hash->setAccessible(true);
 		$prop_permissions->setAccessible(true);
