@@ -14,7 +14,7 @@
 			value="<?= $login; ?>"
             required
 		>
-        <small>
+        <small class="text-danger">
             <?= $errors[\APP\Action\UserReg::POST_NAME_LOGIN]; ?>
         </small>
 	</label><br>
@@ -26,7 +26,7 @@
 			name="<?= \APP\Action\UserReg::POST_NAME_PASS; ?>"
             required
 		>
-        <small>
+        <small class="text-danger">
 	        <?= $errors[\APP\Action\UserReg::POST_NAME_PASS]; ?>
         </small>
 	</label><br>
@@ -36,7 +36,7 @@
 		name="submit"
 		value="Зарегистрироваться"
 	>
-    <small>
+    <small class="text-danger">
 	    <?= $errors[\APP\Action\UserReg::POST_NAME_SUBMIT]; ?>
     </small><br>
 	<br>

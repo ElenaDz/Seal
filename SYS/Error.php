@@ -20,7 +20,6 @@ class Error
 			$error_types
 		);
 
-
 		register_shutdown_function(
 			function () {
 				$error = error_get_last();
@@ -63,9 +62,6 @@ class Error
 		$msg = $e->getMessage();
 		$code = $e->getCode();
 
-		$e->getFile();
-		$e->getLine();
-
 		if ($code && ($code < 300 || $code >= 600))
 		{
 			$msg = $msg." [code $code]";
@@ -79,7 +75,7 @@ class Error
 
 		error_log(
 			(
-			strpos(\PHP_OS, 'WIN') !== false
+				strpos(\PHP_OS, 'WIN') !== false
 				? mb_convert_encoding($msg, 'cp1251', 'utf8')
 				: $msg
 			)
