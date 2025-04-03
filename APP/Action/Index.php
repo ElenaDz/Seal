@@ -1,7 +1,6 @@
 <?php
 namespace APP\Action;
 
-use APP\Service\Auth;
 use SYS\Views;
 
 class Index extends _Base

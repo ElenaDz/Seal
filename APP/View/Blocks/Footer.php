@@ -4,7 +4,7 @@
             <div class="row inner_footer">
                 <div class="site_map">
                     <div class="me-2">
-                        <img class="logo" src="../../../assets/img/logo/logo-white.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                        <img class="logo" src="/assets/img/logo/logo-white.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
                     </div>
                     <div class="d-flex flex-wrap">
                         <div class="element">
@@ -32,7 +32,7 @@
 
                 <div class="call_back col-md-5 offset-md-1 mb-3">
                     <div class="phone_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center">
-                        <div class="col-2 p-0"><img src="../../../assets/img/connection/mphone-white.svg" class="top-icon" alt=""></div>
+                        <div class="col-2 p-0"><img src="/assets/img/connection/mphone-white.svg" class="top-icon" alt=""></div>
                         <div class="phone_inner col-10 ps-2 pe-0 font08">
                             <a href="tel:+74236702701" class="color_black">
                                 <b>+7 (4236) 702-701</b>
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="mail_wrap d-none d-sm-flex col-sm-4 mt-2 col-xl-2 col-xxl-2 row align-items-center">
-                        <div class="col-2 p-0"><img src="../../../assets/img/connection/mail-wite.svg" class="top-icon" alt="mail"></div>
+                        <div class="col-2 p-0"><img src="/assets/img/connection/mail-wite.svg" class="top-icon" alt="mail"></div>
                         <div class="mail_inner col-10 ps-2 pe-0 font08">
                             <a href="mailto:office@tehno-nhk.ru">
                                 <b>office@tehno-nhk.ru</b>

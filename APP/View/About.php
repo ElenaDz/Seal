@@ -1,5 +1,5 @@
 <?=
-\SYS\Views::get(
-    __DIR__.'/Blocks/AboutCompany.php'
-);
+	\SYS\Views::get(
+	    __DIR__.'/Blocks/AboutCompany.php'
+	);
 ?>
