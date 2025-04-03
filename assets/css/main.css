@@ -1,5 +1,6 @@
 .info {
-  margin-left: 15px;
+  width: 52%;
+  justify-content: space-between;
 }
 
 .location_wrap {
@@ -14,6 +15,9 @@
   width: 200px;
 }
 .mail_wrap .mail_inner, .mail_wrap .phone_inner, .mail_wrap .location_inner, .phone_wrap .mail_inner, .phone_wrap .phone_inner, .phone_wrap .location_inner, .location_wrap .mail_inner, .location_wrap .phone_inner, .location_wrap .location_inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   height: 50px;
   font-size: 13px;
 }
@@ -25,8 +29,16 @@
   color: rgb(186, 40, 52);
 }
 
+@media (max-width: 992px) {
+  .info {
+    display: none !important;
+  }
+}
 .navbar {
   background-color: rgb(186, 40, 52) !important;
+}
+.navbar .location, .navbar .mail, .navbar .phone {
+  display: none;
 }
 .navbar .dropdown:hover > .dropdown-menu {
   display: block;
@@ -60,6 +72,14 @@
   background-color: #f1f1f1;
 }
 
+@media (max-width: 992px) {
+  .navbar {
+    min-height: 50px;
+  }
+  .navbar .location, .navbar .mail, .navbar .phone {
+    display: block;
+  }
+}
 .carousel .carousel-indicators button {
   width: 15px;
   height: 15px;
@@ -69,11 +89,14 @@
 .wrap_footer {
   background-image: url("/assets/img/footer.jpg");
 }
-.wrap_footer footer .mail_wrap .mail_inner a, .wrap_footer footer .mail_wrap .phone_inner a, .wrap_footer footer .mail_wrap .location_inner a, .wrap_footer footer .phone_wrap .mail_inner a, .wrap_footer footer .phone_wrap .phone_inner a, .wrap_footer footer .phone_wrap .location_inner a, .wrap_footer footer .location_wrap .mail_inner a, .wrap_footer footer .location_wrap .phone_inner a, .wrap_footer footer .location_wrap .location_inner a {
+.wrap_footer footer .mail_wrap, .wrap_footer footer .phone_wrap {
+  margin: 0;
+}
+.wrap_footer footer .mail_wrap .mail_inner a, .wrap_footer footer .mail_wrap .phone_inner a, .wrap_footer footer .phone_wrap .mail_inner a, .wrap_footer footer .phone_wrap .phone_inner a {
   text-decoration: none;
   color: white;
 }
-.wrap_footer footer .mail_wrap .mail_inner a:hover, .wrap_footer footer .mail_wrap .phone_inner a:hover, .wrap_footer footer .mail_wrap .location_inner a:hover, .wrap_footer footer .phone_wrap .mail_inner a:hover, .wrap_footer footer .phone_wrap .phone_inner a:hover, .wrap_footer footer .phone_wrap .location_inner a:hover, .wrap_footer footer .location_wrap .mail_inner a:hover, .wrap_footer footer .location_wrap .phone_inner a:hover, .wrap_footer footer .location_wrap .location_inner a:hover {
+.wrap_footer footer .mail_wrap .mail_inner a:hover, .wrap_footer footer .mail_wrap .phone_inner a:hover, .wrap_footer footer .phone_wrap .mail_inner a:hover, .wrap_footer footer .phone_wrap .phone_inner a:hover {
   color: rgb(186, 40, 52);
 }
 .wrap_footer footer .inner_footer {
@@ -83,6 +106,15 @@
   width: 46%;
   display: flex;
   justify-content: space-around;
+}
+.wrap_footer footer .inner_footer .site_map .element {
+  margin-right: 15px;
+}
+.wrap_footer footer .inner_footer .site_map a {
+  color: white;
+}
+.wrap_footer footer .inner_footer .site_map a:hover {
+  color: rgb(186, 40, 52);
 }
 .wrap_footer footer .inner_footer .call_back {
   width: 40%;
@@ -132,6 +164,15 @@
   background-image: url("/assets/img/socialmedia/whatsapp_green.svg");
 }
 
+.slogan p {
+  display: flex;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
 header {
   padding: 20px 0 0 0;
   background-color: white;
@@ -139,6 +180,7 @@ header {
 
 body {
   background-color: #f1f1f1;
+  font-family: "Roboto", sans-serif;
 }
 
 main .container {
@@ -146,7 +188,7 @@ main .container {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -162,27 +204,6 @@ ul {
 i {
   display: block;
   background-repeat: no-repeat;
-}
-
-.slogan {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.slogan p {
-  margin: 0;
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
-  .slogan {
-    width: 50px;
-    background-image: url("/assets/img/slogan.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-  .slogan p {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

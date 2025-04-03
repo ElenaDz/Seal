@@ -24,6 +24,7 @@ class Routing
 
             $result = preg_match($reg_ext, $url, $matches);
 
+
             if ($result === 1 && $matches[0] === $url) {
 
                 $class_name = $url_config[1];

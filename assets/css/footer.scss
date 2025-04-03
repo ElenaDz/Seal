@@ -4,9 +4,10 @@
 
   footer {
 
-    .mail_wrap, .phone_wrap, .location_wrap{
+    .mail_wrap, .phone_wrap {
+      margin: 0;
 
-      .mail_inner, .phone_inner, .location_inner{
+      .mail_inner, .phone_inner {
 
         a {
           text-decoration: none;
@@ -26,6 +27,17 @@
         width: 46%;
         display: flex;
         justify-content: space-around;
+
+        .element {
+          margin-right: 15px;
+        }
+        a {
+          color: white;
+
+          &:hover {
+            color: rgb(186, 40, 52);
+          }
+        }
       }
 
       .call_back {
@@ -50,5 +62,7 @@
     }
   }
 }
+
+
 
 

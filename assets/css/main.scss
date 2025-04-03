@@ -5,6 +5,7 @@
 @import "card-group";
 @import "breadcrumb";
 @import "social_icon";
+@import "slogan";
 
 header {
   padding: 20px 0 0 0;
@@ -13,6 +14,7 @@ header {
 
 body {
   background-color: #f1f1f1;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -22,7 +24,7 @@ main {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -38,26 +40,4 @@ ul {
 i {
   display: block;
   background-repeat: no-repeat;
-}
-
-.slogan {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  p {
-    margin: 0;
-  }
-}
-@media (min-width: 576px) and (max-width: 992px) {
-  .slogan {
-    p {
-      display: none;
-    }
-
-    width: 50px;
-    background-image: url("/assets/img/slogan.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
 }

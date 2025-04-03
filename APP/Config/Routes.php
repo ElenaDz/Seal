@@ -1,6 +1,7 @@
 <?php
 namespace APP\Config;
 
+use APP\Action\About;
 use APP\Action\Index;
 use APP\Action\User;
 use APP\Action\UserLogin;
@@ -15,6 +16,10 @@ class Routes
             [
 	            Index::getUrl(),
 	            Index::class
+            ],
+            [
+                About::getUrl(),
+                About::class
             ],
 	        [
 		        User::getUrl(),

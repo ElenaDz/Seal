@@ -1,5 +1,6 @@
 .info {
-  margin-left: 15px;
+  width: 52%;
+  justify-content: space-between;
 
 }
 
@@ -13,9 +14,13 @@
 }
 
 .mail_wrap, .phone_wrap, .location_wrap{
+
   width: 200px;
 
   .mail_inner, .phone_inner, .location_inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     height: 50px;
     font-size: 13px;
 
@@ -27,5 +32,11 @@
         color: rgb(186, 40, 52);
       }
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .info {
+    display: none !important;
   }
 }
