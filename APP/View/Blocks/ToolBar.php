@@ -14,12 +14,14 @@
             <?php endif;?>
 
         </div>
+
         <div class="slogan">
             <p>
                 Мы заботимся, о сохраности вашего груза
             </p>
 
         </div>
+
         <div class="info d-flex align-items-center">
 
             <div>
@@ -52,11 +54,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
-
     </div>
-
-
-
 </div>

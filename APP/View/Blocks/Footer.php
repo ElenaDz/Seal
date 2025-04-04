@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="element">
-                            <h5><a href="#">Контакты</a></h5>
+                            <h5><a href="<?= \APP\Action\Contacts::getUrl() ?>">Контакты</a></h5>
                         </div>
                     </div>
 

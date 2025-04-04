@@ -25,7 +25,7 @@
                         <a class="nav-link" href="<?= \APP\Action\About::getUrl() ?>">О Компании</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="<?= \APP\Action\Contacts::getUrl() ?>">Контакты</a>
                     </li>
                     <li class="nav-item location">
                         <a class="nav-link" href="#"> <b>Находка</b> ул. Спортивная, д. 51а</a>

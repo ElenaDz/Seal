@@ -2,7 +2,9 @@
 namespace APP\Config;
 
 use APP\Action\About;
+use APP\Action\Contacts;
 use APP\Action\Index;
+use APP\Action\PageProduct;
 use APP\Action\User;
 use APP\Action\UserLogin;
 use APP\Action\UserLogout;
@@ -20,6 +22,14 @@ class Routes
             [
                 About::getUrl(),
                 About::class
+            ],
+            [
+                '/(\d+)/',
+                PageProduct::class
+            ],
+            [
+                Contacts::getUrl(),
+                Contacts::class
             ],
 	        [
 		        User::getUrl(),

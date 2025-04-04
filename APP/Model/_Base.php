@@ -3,7 +3,7 @@ namespace APP\Model;
 
 abstract class _Base
 {
-	private static $pdo;
+	private static \PDO $pdo;
 
 	protected static function getPDO(): \PDO
 	{
