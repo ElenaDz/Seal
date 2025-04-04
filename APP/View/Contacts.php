@@ -31,10 +31,11 @@
             </ul>
 
         </div>
+
         <?=
-        \SYS\Views::get(
-            __DIR__.'/Blocks/Map.php'
-        );
+            \SYS\Views::get(
+                __DIR__.'/Blocks/Map.php'
+            );
         ?>
 
     </div>

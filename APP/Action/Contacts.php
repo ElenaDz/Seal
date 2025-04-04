@@ -9,7 +9,7 @@ class Contacts extends _Base
     public  function __invoke() {
 
         $content = Views::get(
-            __DIR__ . '/../View/Сontacts.php',
+            __DIR__ . '/../View/Contacts.php',
             [
 
             ]
