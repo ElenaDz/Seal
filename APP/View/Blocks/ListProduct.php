@@ -6,9 +6,9 @@
                 <!-- fixme вынеси карточку в отельный шаблон делать цикл -->
 
                 <?=
-                \SYS\Views::get(
-                    __DIR__.'/CardProduct.php'
-                );
+                    \SYS\Views::get(
+                        __DIR__.'/CardProduct.php'
+                    );
                 ?>
 
                 <div class="card shadow p-3 mb-5 bg-white rounded">
