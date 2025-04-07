@@ -1,0 +1,37 @@
+.page_product {
+
+  .btn_wrap {
+    display: flex;
+    justify-content: end;
+  }
+
+  .cover {
+    width: 40%;
+
+  }
+  .characteristics_wrap {
+    width: 60%;
+  }
+  ul {
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+      border-bottom: 1px solid rgba(0, 0, 0, .14);
+    }
+  }
+
+
+  .element {
+    width: 70%;
+    display: flex;
+
+  }
+  .characteristics {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+    margin-left: 5px;
+  }
+}
