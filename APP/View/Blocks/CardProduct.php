@@ -7,9 +7,11 @@ return;
 ?>
 
 <div class="card shadow p-3 mb-5 bg-white rounded">
-    <img src="/assets/img/seal/<?= $product->cover ?>" class="card-img-top" alt="<?= $product->cover ?>">
-    <div class="card-body">
-        <h5 class="card-title"><?= $product->title ?></h5>
-        <p class="card-text"><?= $product->description ?></p>
-    </div>
+    <a href="<?= \APP\Action\PageProduct::getUrl($product->getId)?>">
+        <img src="/assets/img/seal/<?= $product->getCover ?>" class="card-img-top" alt="<?= $product->getCover ?>">
+        <div class="card-body">
+            <h5 class="card-title"><?= $product->getTitle ?></h5>
+            <p class="card-text"><?= $product->getDescription ?></p>
+        </div>
+    </a>
 </div>

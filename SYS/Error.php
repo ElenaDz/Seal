@@ -65,7 +65,7 @@ class Error
 		if ($code && ($code < 300 || $code >= 600))
 		{
 			$msg = $msg." [code $code]";
-			unset($code);
+//			unset($code);
 		}
 
 		if ($e->getFile()) {
