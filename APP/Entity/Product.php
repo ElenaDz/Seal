@@ -13,6 +13,7 @@ class Product
 
 
 
+	// fixme удалить все автоматически сгенерированные гетере и сетеры, которые не используются
     public function getId()
     {
         return $this->id;

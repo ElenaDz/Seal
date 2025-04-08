@@ -24,7 +24,6 @@ class Routes
                 About::class
             ],
             [
-				// fixme плохой урл, сделай /product/<id>/
                 '/product/(\d+)/',
                 PageProduct::class
             ],

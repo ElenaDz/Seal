@@ -3,7 +3,6 @@
     <div class="d-flex mb-3 justify-content-between">
 
         <div class="d-flex align-items-center">
-            <!-- fixme ты выбрала "минус" в качестве пробелов в именах файлов картинок, придерживайся этого во всех картинках ok-->
             <?php if ($_SERVER['REQUEST_URI'] !== \APP\Action\Index::getUrl()): ?>
                 <a href="<?= \APP\Action\Index::getUrl()?>">
                     <img class="logo" src="/assets/img/logo/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
@@ -17,7 +16,7 @@
 
         <div class="slogan">
             <p>
-                Мы заботимся, о сохраности вашего груза
+                Мы заботимся, о сохранности вашего груза
             </p>
 
         </div>
