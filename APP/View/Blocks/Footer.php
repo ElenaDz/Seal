@@ -1,3 +1,10 @@
+<?php
+use APP\Entity\Product;
+
+/** @var Product $products */
+
+?>
+
 <div class="wrap_footer text-white">
     <div class="container">
         <footer class="py-4">
@@ -11,7 +18,6 @@
                             <h5>ЗПУ</h5>
                             <ul class="nav flex-column">
                                 <!-- fixme сделать цикл -->
-                                <li class="nav-item mb-2"><a href="<?= \APP\Action\PageProduct::getUrl(1) ?>" class="nav-link p-0">ТП 350-01</a></li>
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0">ТП 40 Закрутка</a></li>
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0">ТП 1200-01</a></li>
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0">ТП 2900-02</a></li>

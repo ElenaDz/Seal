@@ -34,4 +34,62 @@
     justify-content: end;
     margin-left: 5px;
   }
+
+  .description_wrap {
+    width: 240%;
+  }
+
+
+}
+
+@media (max-width: 992px) {
+  .page_product {
+
+    .info_description {
+      flex-direction: column;
+
+      .description_wrap {
+        width: 100%;
+      }
+
+      .certificate_wrap {
+        img {
+          width: 50%;
+        }
+      }
+    }
+
+    .btn_wrap {
+      display: none;
+    }
+
+    .cover_wrap {
+      display: flex;
+      flex-direction: column;
+
+      .cover {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+          width: 80% ;
+        }
+      }
+
+
+      .characteristics_wrap {
+        width: 100%;
+        margin-bottom: 10px;
+
+        .btn_wrap_mobile {
+          display: block !important;
+        }
+
+        .characteristics_inner {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
 }

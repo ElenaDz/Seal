@@ -3,4 +3,10 @@
   background-color: #bf262e;
   border-color: #bf262e;
   border-radius: 5px;
+
+  &:hover {
+    border: 1px solid #bf262e;
+    border-radius: 5px;
+    color: #bf262e;
+  }
 }
