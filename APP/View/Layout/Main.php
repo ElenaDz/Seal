@@ -57,8 +57,7 @@ use SYS\Views;
 
     </main>
 
-    <?= Views::get(
-            __DIR__.'/../Blocks/Footer.php'); ?>
+    <?= Views::get(__DIR__.'/../Blocks/Footer.php');?>
 
     <?=
     \SYS\Views::get(
