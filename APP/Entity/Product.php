@@ -39,6 +39,7 @@ class Product
     }
 
 
+	// fixme html в БД без необходимости недопустим, если он там нужен объясни мне зачем
     public function getDescription()
     {
         return $this->description;
@@ -49,9 +50,8 @@ class Product
         $this->description = $description;
     }
 
-    /**
-     * @return mixed
-     */
+
+	// fixme расширение файла нужно хранить в БД
     public function getCover()
     {
         return $this->cover;

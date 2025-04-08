@@ -7,8 +7,9 @@ use SYS\Views;
 
 class PageProduct extends _Base
 {
-    public  function __invoke($id) {
-
+    public  function __invoke($id)
+    {
+		// fixme нет обработки случая когда продукт не найден
         $product = Products::getById($id);
 
         $content = Views::get(

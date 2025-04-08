@@ -6,7 +6,10 @@ use APP\Entity\Product;
 
 class Products extends _Base
 {
-    public static function getAll(): array
+	/**
+	 * @return Product[]
+	 */
+    public static function getAll()
     {
         $results = self::getPDO()->query(
             'SELECT * FROM products'
@@ -18,6 +21,7 @@ class Products extends _Base
         );
     }
 
+	// fixme добавь phpdoc с указанием типа возвращаемого знания
     public static function getById(int $id)
     {
         $results = self::getPDO()->query(
@@ -29,6 +33,4 @@ class Products extends _Base
             Product::class
         );
     }
-
-
 }

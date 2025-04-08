@@ -1,17 +1,25 @@
 <?php
 namespace APP\Model;
 
+use PDO;
+
 abstract class _Base
 {
-	private static \PDO $pdo;
+	/**
+	 * @var PDO $pdo
+	 */
+	private static $pdo;
 
-	protected static function getPDO(): \PDO
+	protected static function getPDO(): PDO
 	{
 		if (empty(self::$pdo)) {
-			self::$pdo = new \PDO(
+			self::$pdo = new PDO(
 				'mysql:host=localhost;dbname=seal',
 				'seal',
-				's3*LNt$9'
+				's3*LNt$9',
+				array(
+					PDO::ATTR_PERSISTENT => true
+				)
 			);
 		}
 		return self::$pdo;

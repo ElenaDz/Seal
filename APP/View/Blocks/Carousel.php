@@ -8,6 +8,7 @@
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
+                <!-- fixme не удачное фото для первого слайда Не видно стрелок влево вправо, поменяй местами 2 и 1-->
                 <div class="carousel-item active">
                     <img src="/assets/img/carousel/1.jpg" class="d-block w-100" alt="1">
                     <div class="carousel-caption d-none d-md-block">

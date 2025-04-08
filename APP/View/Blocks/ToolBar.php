@@ -3,11 +3,12 @@
     <div class="d-flex mb-3 justify-content-between">
 
         <div class="d-flex align-items-center">
+
+            <!-- fixme логотип имеет искаженные пропорции, чтобы исправить навсегда используй object-fit: cover; -->
             <?php if ($_SERVER['REQUEST_URI'] !== \APP\Action\Index::getUrl()): ?>
                 <a href="<?= \APP\Action\Index::getUrl()?>">
                     <img class="logo" src="/assets/img/logo/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
                 </a>
-
             <?php else: ?>
                 <img class="logo" src="/assets/img/logo/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
             <?php endif;?>
@@ -27,6 +28,7 @@
                 <a class="location_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center" href="#">
                     <div class="col-2 p-0"><img class="img-fluid" src="/assets/img/connection/location.svg" alt=""></div>
                     <div class="location_inner col-10 ps-2 pe-0 font08">
+                        <!-- fixme тут должна быть ссылка на страницу Контакты -->
                         <b>Находка</b> ул. Спортивная, д. 51а
                     </div>
                 </a>

@@ -1,6 +1,7 @@
 <div class="">
     <div class="container ">
         <div class=" bg-white shadow p-3 mb-5 bg-white rounded">
+            <!-- fixme почему не во всю ширину блока? -->
             <div class="col-12 col-lg-6 margin_unset">
 
                 <h1 class="h3 montserat"><b>О компании</b></h1>

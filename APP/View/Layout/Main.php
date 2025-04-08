@@ -32,6 +32,7 @@ use SYS\Views;
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
+<!-- fixme есть крошечный горизонтальная прокрутка, нужно избавиться от нее -->
 <body>
 
     <header>
@@ -60,9 +61,9 @@ use SYS\Views;
     <?= Views::get(__DIR__.'/../Blocks/Footer.php');?>
 
     <?=
-    \SYS\Views::get(
-        __DIR__.'/../Blocks/ModalCallback.php'
-    );
+        \SYS\Views::get(
+            __DIR__.'/../Blocks/ModalCallback.php'
+        );
     ?>
 
 </body>
