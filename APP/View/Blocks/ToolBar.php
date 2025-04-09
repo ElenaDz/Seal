@@ -4,7 +4,7 @@
 
         <div class="d-flex align-items-center">
 
-            <!-- fixme логотип имеет искаженные пропорции, чтобы исправить навсегда используй object-fit: cover; -->
+            <!-- fixme логотип имеет искаженные пропорции, чтобы исправить навсегда используй object-fit: cover; ok -->
             <?php if ($_SERVER['REQUEST_URI'] !== \APP\Action\Index::getUrl()): ?>
                 <a href="<?= \APP\Action\Index::getUrl()?>">
                     <img class="logo" src="/assets/img/logo/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">

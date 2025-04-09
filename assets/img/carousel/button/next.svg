@@ -1,0 +1,6 @@
+<svg width="60" height="60" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <!-- чёрная "тень" (обводка) -->
+    <path d="M15 10 L25 20 L15 30" stroke="black" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- белая основная линия -->
+    <path d="M15 10 L25 20 L15 30" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -8,6 +8,7 @@
 @import "slogan";
 @import "page_product";
 @import "button";
+@import "contacts";
 
 header {
   padding: 20px 0 0 0;
@@ -35,9 +36,10 @@ ul {
 }
 
 .logo {
-  width: 130px;
+  width: 150px;
   height: 50px;
   margin-right: 10px;
+  object-fit: cover;
 }
 
 i {

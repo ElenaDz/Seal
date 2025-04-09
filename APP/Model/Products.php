@@ -9,7 +9,7 @@ class Products extends _Base
 	/**
 	 * @return Product[]
 	 */
-    public static function getAll()
+    public static function getAll(): array
     {
         $results = self::getPDO()->query(
             'SELECT * FROM products'
@@ -21,8 +21,13 @@ class Products extends _Base
         );
     }
 
-	// fixme добавь phpdoc с указанием типа возвращаемого знания
-    public static function getById(int $id)
+	// fixme добавь phpdoc с указанием типа возвращаемого знания ok
+
+    /**
+     * @param int $id
+     * @return Product
+     */
+    public static function getById(int $id): Product
     {
         $results = self::getPDO()->query(
             'SELECT * FROM products

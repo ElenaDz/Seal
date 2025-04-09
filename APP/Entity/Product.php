@@ -13,54 +13,27 @@ class Product
 
 
 
-	// fixme удалить все автоматически сгенерированные гетере и сетеры, которые не используются
+	// fixme удалить все автоматически сгенерированные гетере и сетеры, которые не используются ok
     public function getId()
     {
         return $this->id;
     }
 
-
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getTitle()
     {
         return $this->title;
     }
 
-    public function setTitle($title)
-    {
-        $this->title = $title;
-    }
-
-
-	// fixme html в БД без необходимости недопустим, если он там нужен объясни мне зачем
+	// fixme html в БД без необходимости недопустим (после сдачи)
     public function getDescription()
     {
         return $this->description;
     }
 
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
-
-
-	// fixme расширение файла нужно хранить в БД
+	// fixme расширение файла нужно хранить в БД ok
     public function getCover()
     {
         return $this->cover;
-    }
-
-
-    public function setCover($cover)
-    {
-        $this->cover = $cover;
     }
 
     public function getCharacteristics()
@@ -68,23 +41,8 @@ class Product
         return $this->characteristics;
     }
 
-
-    public function setCharacteristics($characteristics)
-    {
-        $this->characteristics = $characteristics;
-    }
-
-
     public function getCertificate()
     {
         return $this->certificate;
     }
-
-
-    public function setCertificate($certificate)
-    {
-        $this->certificate = $certificate;
-    }
-
-
 }

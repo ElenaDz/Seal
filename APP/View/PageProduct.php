@@ -6,7 +6,7 @@ use APP\Entity\Product;
 <div class="container  page_product bg-white shadow p-3 mb-5 bg-white rounded">
     <div class="d-flex cover_wrap">
         <div class="cover">
-            <img src="/assets/img/seal/<?= $product->getCover()?>.jpg" width="100%" height="100%"  alt="">
+            <img src="/assets/img/seal/<?= $product->getCover()?>" width="100%" height="100%"  alt="">
         </div>
 
 
@@ -36,8 +36,8 @@ use APP\Entity\Product;
         <?= $product->getDescription() ?>
 
         <div class="certificate_wrap">
-            <a href="/assets/certificate/<?= $product->getCertificate()?>.jpg">
-                <img src="/assets/certificate/<?= $product->getCertificate()?>.jpg" width="100%" height="100%"  alt="<?= $product->getCertificate()?>">
+            <a href="/assets/certificate/<?= $product->getCertificate()?>">
+                <img src="/assets/certificate/<?= $product->getCertificate()?>" width="100%" height="100%"  alt="<?= $product->getCertificate()?>">
             </a>
         </div>
     </div>

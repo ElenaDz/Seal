@@ -6,8 +6,8 @@ use APP\Entity\Product;
 ?>
 <div>
     <div class="container">
-        <!-- fixme это list_cart_product -->
-        <div class="list_product">
+        <!-- fixme это list_cart_product ok -->
+        <div class="list_cart_product">
             <div class="card-group">
                 <?php foreach ($products as $product):  ?>
                     <?=

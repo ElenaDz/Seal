@@ -13,7 +13,7 @@ use APP\Entity\Product;
 
 <?=
 	\SYS\Views::get(
-		__DIR__.'/Blocks/ListProduct.php',
+		__DIR__ . '/Blocks/ListCartProduct.php',
 		[
 			'products' => $products
 		]

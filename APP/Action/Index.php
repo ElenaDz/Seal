@@ -10,6 +10,7 @@ class Index extends _Base
 	{
         $products = Products::getAll();
 
+
 		$content = Views::get(
 			__DIR__ . '/../View/Index.php',
 			[

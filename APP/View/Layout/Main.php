@@ -7,6 +7,7 @@ use SYS\Views;
 /** @var string $content */
 /** @var array $bread_crumbs */
 /** @var Product $products */
+
 ?>
 
 <!DOCTYPE html>

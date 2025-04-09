@@ -3,6 +3,7 @@
 namespace APP\Action;
 
 use APP\Model\Products;
+use SYS\Error;
 use SYS\Views;
 
 class PageProduct extends _Base
@@ -11,6 +12,11 @@ class PageProduct extends _Base
     {
 		// fixme нет обработки случая когда продукт не найден
         $product = Products::getById($id);
+
+        if (empty($products)) {
+            // fixme создать ошибку
+
+        }
 
         $content = Views::get(
             __DIR__ . '/../View/PageProduct.php',
@@ -21,7 +27,7 @@ class PageProduct extends _Base
 
 
         self::showLayoutMain(
-            'Имя товара',
+            $product->getTitle(),
             $content,
             [
                 [
@@ -29,7 +35,7 @@ class PageProduct extends _Base
                     'url' => Index::getUrl()
                 ],
                 [
-                    'name' => 'Имя товара'
+                    'name' => $product->getTitle()
                 ]
             ]
         );

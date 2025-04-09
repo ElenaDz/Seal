@@ -15,7 +15,7 @@
                             ЗПУ
                         </a>
                         <ul class="dropdown-menu">
-                            <!-- fixme сделать цикл -->
+                            <!-- fixme передать продукты, сделать цикл -->
                             <li><a class="dropdown-item" href="<?= \APP\Action\PageProduct::getUrl(3)?>">ТП 350-01</a></li>
                             <li><a class="dropdown-item" href="#">ТП 40 Закрутка</a></li>
                             <li><a class="dropdown-item" href="#">ТП 1200-01</a></li>
