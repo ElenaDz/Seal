@@ -12,8 +12,6 @@ class Product
     private $certificate;
 
 
-
-	// fixme удалить все автоматически сгенерированные гетере и сетеры, которые не используются ok
     public function getId()
     {
         return $this->id;
@@ -30,7 +28,7 @@ class Product
         return $this->description;
     }
 
-	// fixme расширение файла нужно хранить в БД ok
+	// fixme этот метод должен возвращать то чем удобно пользоваться программиста, а именно url картинки, а не имя файла
     public function getCover()
     {
         return $this->cover;
@@ -41,6 +39,7 @@ class Product
         return $this->characteristics;
     }
 
+	// fixme должен возвращать url, переименовать
     public function getCertificate()
     {
         return $this->certificate;

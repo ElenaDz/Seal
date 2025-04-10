@@ -11,25 +11,42 @@
 
                     <div class="row">
                         <div class="col-12">
-                            <label class="control-label " for="af_name">Ваше имя</label>
                             <div class="controls">
-                                <input type="text" id="af_name" name="name2" value="" placeholder="" class="form-control" required="">
+                                <input type="text" id="af_name" name="name2" value="" placeholder="Ваше имя" class="form-control" required="">
                                 <span class="error_name"></span>
                             </div>
                         </div>
 
                         <div class="col-12">
-                            <label class="control-label " for="af_phone">Телефон</label>
                             <div class="controls">
-                                <input  pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"  data-mask="+7 (999) 999-99-99" type="tel" id="phone" name="phone" value="" placeholder="" class="form-control" required="">
+                                <!-- fixme нужно чтобы в полей стразу отображалось +7 так как иначе если вводить номер не с 7 а сразу с любой другой цифры она теряется вместо
+                                       нее появляться +7 и это очень бесит когда вводишь не глядя на экран -->
+                                <input
+                                    pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
+                                    data-mask="+7 (999) 999-99-99"
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    value=""
+                                    placeholder="Телефон"
+                                    class="form-control"
+                                    required
+                                >
                                 <span class="error_phone"></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group mt-3 d-flex justify-content-end">
+                        <!-- fixme тут лучше текст "Оставить заявку" -->
                         <button  type="submit" class="btn btn_base">Отправить</button>
+
                     </div>
+
+                    <label for="152fz">
+                        <input id='152fz' type="checkbox" value="" checked>
+                        Нажимая на кнопку «Отправить» Вы даёте согласие на обработку персональных данных в соответствии со статьей 9 ФЗ от 27 июля 2006 г. № 152 ФЗ «О персональных данных».
+                    </label>
 
                     <input type="hidden" name="af_action" value="cf7d1da720b9bd2676bea895e2082f4c">
                 </form>
@@ -42,6 +59,7 @@
 
 <script>
 //    Код Семёна
+    // fixme указать ссылку откуда взят код если есть
     const phoneInput = document.getElementById('phone');
 
     phoneInput.addEventListener('input', () => {
@@ -73,9 +91,10 @@
         phoneInput.value = formatted;
     });
 
-    document.getElementById('phoneForm').addEventListener('submit', function (e) {
+    document.getElementById('phoneForm').addEventListener('submit', function (e)
+    {
         const pattern = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
-        if (!pattern.test(phoneInput.value)) {
+        if ( ! pattern.test(phoneInput.value)) {
             e.preventDefault();
             alert('Введите номер в формате: +7 (999) 999-99-99');
         }

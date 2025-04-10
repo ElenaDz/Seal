@@ -21,12 +21,11 @@ class Products extends _Base
         );
     }
 
-	// fixme добавь phpdoc с указанием типа возвращаемого знания ok
-
     /**
      * @param int $id
      * @return Product
      */
+	// fixme удалить тип возвращаемого значения
     public static function getById(int $id): Product
     {
         $results = self::getPDO()->query(
@@ -50,5 +49,4 @@ class Products extends _Base
             Product::class
         );
     }
-
 }

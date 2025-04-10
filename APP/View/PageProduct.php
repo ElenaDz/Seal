@@ -4,12 +4,12 @@ use APP\Entity\Product;
 /** @var Product $product */
 ?>
 <div class="container  page_product bg-white shadow p-3 mb-5 bg-white rounded">
+
     <div class="d-flex cover_wrap">
+
         <div class="cover">
             <img src="/assets/img/seal/<?= $product->getCover()?>" width="100%" height="100%"  alt="">
         </div>
-
-
 
         <div class="characteristics_wrap">
             <div class="d-flex justify-content-between">
@@ -21,9 +21,9 @@ use APP\Entity\Product;
                     </button>
                 </div>
             </div>
-
             <?= $product->getCharacteristics() ?>
         </div>
+
     </div>
 
     <div class="btn_wrap">

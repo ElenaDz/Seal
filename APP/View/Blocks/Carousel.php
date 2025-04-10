@@ -7,11 +7,11 @@
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
     <div class="carousel-inner">
-        <!-- fixme не удачное фото для первого слайда Не видно стрелок влево вправо, поменяй местами 2 и 1 ok (карусель ещё в разработке)-->
         <div class="carousel-item active">
-            <img src="../../../assets/img/carousel/background/washed_out/2.jpg" class="d-block w-100" alt="1">
+            <img src="/assets/img/carousel/background/washed_out/2.jpg" class="d-block w-100" alt="1">
             <div class="carousel-caption d-none d-md-block">
                 <div class="carousel_seal_inner">
+                    <!-- fixme нельзя хардкодить данные из БД, используй объекты из БД здесь -->
                     <a href="<?= \APP\Action\PageProduct::getUrl(3) ?>">
                         <img src="/assets/img/seal/without_background/tp1200-01.png" class="carousel_seal" alt="">
                         <h2 class="">ТП 1200-01</h2>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../../../assets/img/carousel/background/washed_out/1.jpg" class="d-block w-100" alt="2">
+            <img src="/assets/img/carousel/background/washed_out/1.jpg" class="d-block w-100" alt="2">
             <div class="carousel-caption d-none d-md-block">
                 <div class="carousel_seal_inner">
                     <a href="<?= \APP\Action\PageProduct::getUrl(1) ?>">
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../../../assets/img/carousel/background/washed_out/3.jpg" class="d-block w-100" alt="3">
+            <img src="/assets/img/carousel/background/washed_out/3.jpg" class="d-block w-100" alt="3">
             <div class="carousel-caption d-none d-md-block">
                 <div class="carousel_seal_inner">
                     <a href="<?= \APP\Action\PageProduct::getUrl(2) ?>">
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../../../assets/img/carousel/background/washed_out/4.jpg" class="d-block w-100" alt="4">
+            <img src="/assets/img/carousel/background/washed_out/4.jpg" class="d-block w-100" alt="4">
             <div class="carousel-caption d-none d-md-block">
                 <div class="carousel_seal_inner">
                     <a href="<?= \APP\Action\PageProduct::getUrl(4) ?>">
@@ -66,10 +66,13 @@
             </div>
         </div>
     </div>
+
+    <!-- fixme удали кнопку предыдущий так как выглядит не аккуратно когда стрелка перекрывает картинки пломб, тем более здесь ссылка на пломбе  -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Предыдущий</span>
     </button>
+
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Следующий</span>

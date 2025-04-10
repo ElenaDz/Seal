@@ -9,7 +9,6 @@ class Index extends _Base
 	public function __invoke()
 	{
         $products = Products::getAll();
-
         if (empty($products)) {
             // fixme создать ошибку
 

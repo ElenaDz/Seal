@@ -10,7 +10,6 @@ abstract class _Base
     public static function showLayoutMain($title, $content, $bread_crumbs = [])
     {
         $products = Products::getAllBySelect('id, title');
-
         if (empty($products)) {
             // fixme создать ошибку
         }

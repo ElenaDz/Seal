@@ -1,17 +1,14 @@
 <?php
 
-use SYS\Views;
 ?>
-
 
 <div class="contacts py-3">
     <h1 class="h3">Контакты</h1>
     <div class="bg-white p-5 rounded mb-2">
         <div class="row">
             <div class="d-flex address col-10">
-                <!-- fixme здесь стоит добавить ссылку например такую https://go.2gis.com/4r1Xm ok-->
                 <p class="me-2 mb-0">Адрес:</p>
-                <a class="" href="https://go.2gis.com/4r1Xm">
+                <a href="https://go.2gis.com/4r1Xm">
                     <p class="m-0">
                          692904, Приморский край, г. Находка,&nbsp;<span>ул. Спортивная, д. 51а</span>
                     </p>

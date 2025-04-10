@@ -10,9 +10,7 @@ class PageProduct extends _Base
 {
     public  function __invoke($id)
     {
-		// fixme нет обработки случая когда продукт не найден
         $product = Products::getById($id);
-
         if (empty($product)) {
             // fixme создать ошибку
 

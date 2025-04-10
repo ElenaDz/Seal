@@ -1,15 +1,7 @@
 <?php
 /** @var array $bread_crumbs */
-?>
 
-<?php
-if (_isUrl(\APP\Action\Index::getUrl()))
-{
-    return;
-}
-
-// fixme "обертку" container и тп нужно сохранять в том файле который использует этот шаблон, здесь должен быть
-//  "чистый" блок, исправь это во всех шаблонах блоков ok
+if (_isUrl(\APP\Action\Index::getUrl())) return;
 ?>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">

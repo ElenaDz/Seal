@@ -16,10 +16,7 @@ abstract class _Base
 			self::$pdo = new PDO(
 				'mysql:host=localhost;dbname=seal',
 				'seal',
-				's3*LNt$9',
-				array(
-					PDO::ATTR_PERSISTENT => true
-				)
+				's3*LNt$9'
 			);
 		}
 		return self::$pdo;
