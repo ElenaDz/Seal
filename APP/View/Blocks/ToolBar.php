@@ -15,8 +15,8 @@
 
         </div>
 
-        <div class="slogan">
-            <p>
+        <div class="slogan d-flex justify-content-center align-items-center">
+            <p class=" d-flex justify-content-center m-0">
                 Мы заботимся, о сохранности вашего груза
             </p>
 
@@ -25,10 +25,10 @@
         <div class="info d-flex align-items-center">
 
             <div>
-                <a class="location_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center" href="#">
+                <a class="location_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center" href="<?= \APP\Action\Contacts::getUrl()?>">
                     <div class="col-2 p-0"><img class="img-fluid" src="/assets/img/connection/location.svg" alt=""></div>
                     <div class="location_inner col-10 ps-2 pe-0 font08">
-                        <!-- fixme тут должна быть ссылка на страницу Контакты -->
+                        <!-- fixme тут должна быть ссылка на страницу Контакты ok-->
                         <b>Находка</b> ул. Спортивная, д. 51а
                     </div>
                 </a>

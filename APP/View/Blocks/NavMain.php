@@ -1,3 +1,9 @@
+<?php
+use APP\Entity\Product;
+
+/** @var Product $products */
+
+?>
 <nav class="navbar p-0  navbar-expand-lg bg-body-tertiary">
 
     <div class="container">
@@ -15,30 +21,38 @@
                             ЗПУ
                         </a>
                         <ul class="dropdown-menu">
-                            <!-- fixme передать продукты, сделать цикл -->
-                            <li><a class="dropdown-item" href="<?= \APP\Action\PageProduct::getUrl(3)?>">ТП 350-01</a></li>
-                            <li><a class="dropdown-item" href="#">ТП 40 Закрутка</a></li>
-                            <li><a class="dropdown-item" href="#">ТП 1200-01</a></li>
-                            <li><a class="dropdown-item" href="#">ТП 2900-02</a></li>
+                            <?php foreach ($products as $product):  ?>
+                                <li>
+                                    <a class="dropdown-item" href="<?= \APP\Action\PageProduct::getUrl($product->getId())?>">
+                                        <?= $product->getTitle() ?>
+                                    </a>
+                                </li>
+                            <?php endforeach ?>
                         </ul>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="<?= \APP\Action\About::getUrl() ?>">О Компании</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="<?= \APP\Action\Contacts::getUrl() ?>">Контакты</a>
                     </li>
+
                     <li class="nav-item location">
                         <a class="nav-link" href="#"> <b>Находка</b> ул. Спортивная, д. 51а</a>
                     </li>
+
                     <li class="nav-item phone">
                         <a class="nav-link" href="tel:+74236702701"><b>+7 (4236) 702-701</b></a>
                     </li>
+
                     <li class="nav-item mail">
                         <a class="nav-link" href="mailto:office@tehno-nhk.ru">
                             <b>office@tehno-nhk.ru</b>
                         </a>
                     </li>
+
                     <li  class="nav-item mail">
                         <a class="nav-link" href="mailto:tehnomarket.nhk@yandex.ru">
                             <b>tehnomarket.nhk@yandex.ru</b>

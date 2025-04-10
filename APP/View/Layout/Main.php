@@ -40,26 +40,36 @@ use SYS\Views;
 
         <?= Views::get(__DIR__.'/../Blocks/ToolBar.php'); ?>
 
-        <?= Views::get(__DIR__.'/../Blocks/NavMain.php'); ?>
-
-    </header>
-
-    <main>
         <?=
-            Views::get(
-                __DIR__ . '/../Blocks/BreadCrumbs.php',
+            Views::get(__DIR__.'/../Blocks/NavMain.php',
                 [
-                    'bread_crumbs' => $bread_crumbs
+                    'products' => $products
                 ]
             );
         ?>
+    </header>
 
-        <?= $content; ?>
+    <main>
+        <div class="container">
+            <?=
+                Views::get(
+                    __DIR__ . '/../Blocks/BreadCrumbs.php',
+                    [
+                        'bread_crumbs' => $bread_crumbs
+                    ]
+                );
+            ?>
 
-
+            <?= $content; ?>
+        </div>
     </main>
-
-    <?= Views::get(__DIR__.'/../Blocks/Footer.php');?>
+    <?=
+        Views::get(__DIR__.'/../Blocks/Footer.php',
+            [
+                'products' => $products
+            ]
+        );
+    ?>
 
     <?=
         \SYS\Views::get(

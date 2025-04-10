@@ -2,18 +2,26 @@
 
 namespace APP\Action;
 
+use APP\Model\Products;
 use SYS\Views;
 
 abstract class _Base
 {
     public static function showLayoutMain($title, $content, $bread_crumbs = [])
     {
+        $products = Products::getAllBySelect('id, title');
+
+        if (empty($products)) {
+            // fixme создать ошибку
+        }
+
         echo Views::get(
             __DIR__.'/../View/Layout/Main.php',
             [
                 'title' => $title,
                 'content' =>  $content,
-                'bread_crumbs' => $bread_crumbs
+                'bread_crumbs' => $bread_crumbs,
+                'products' => $products
             ]
         );
     }

@@ -20,4 +20,23 @@
   .carousel-control-next-icon {
     background-image: url("/assets/img/carousel/button/next.svg");
   }
+
+  .carousel-inner {
+
+    .carousel_seal_inner {
+      position: absolute;
+      bottom: 70%;
+      left: -65%;
+
+      .carousel_seal {
+        width: 35%;
+      }
+
+      h2 {
+        color: white;
+        -webkit-text-stroke: 1px rgb(186, 40, 52);
+      }
+    }
+
+  }
 }

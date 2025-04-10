@@ -1,4 +1,10 @@
-<div class="container contacts py-3">
+<?php
+
+use SYS\Views;
+?>
+
+
+<div class="contacts py-3">
     <h1 class="h3">Контакты</h1>
     <div class="bg-white p-5 rounded mb-2">
         <div class="row">

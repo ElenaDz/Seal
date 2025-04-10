@@ -38,4 +38,17 @@ class Products extends _Base
             Product::class
         );
     }
+
+    public static function getAllBySelect($select): array
+    {
+        $results = self::getPDO()->query(
+            "SELECT $select FROM products"
+        );
+
+        return $results->fetchAll(
+            \PDO::FETCH_CLASS,
+            Product::class
+        );
+    }
+
 }

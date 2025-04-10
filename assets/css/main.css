@@ -96,6 +96,18 @@
 .carousel .carousel-control-next-icon {
   background-image: url("/assets/img/carousel/button/next.svg");
 }
+.carousel .carousel-inner .carousel_seal_inner {
+  position: absolute;
+  bottom: 70%;
+  left: -65%;
+}
+.carousel .carousel-inner .carousel_seal_inner .carousel_seal {
+  width: 35%;
+}
+.carousel .carousel-inner .carousel_seal_inner h2 {
+  color: white;
+  -webkit-text-stroke: 1px rgb(186, 40, 52);
+}
 
 .wrap_footer {
   background-image: url("/assets/img/footer.jpg");
@@ -175,29 +187,6 @@
   background-image: url("/assets/img/socialmedia/whatsapp_green.svg");
 }
 
-.slogan p {
-  display: flex;
-  height: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
-  /**
-  .slogan {
-    p {
-      display: none;
-    }
-
-    width: 50px;
-    background-image: url("/assets/img/slogan.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-  */
-}
 .page_product .btn_wrap {
   display: flex;
   justify-content: end;
@@ -278,6 +267,7 @@
   border: 1px solid #bf262e;
   border-radius: 5px;
   color: #bf262e;
+  background-color: white;
 }
 
 .contacts a:hover {

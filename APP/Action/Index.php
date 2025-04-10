@@ -10,6 +10,10 @@ class Index extends _Base
 	{
         $products = Products::getAll();
 
+        if (empty($products)) {
+            // fixme создать ошибку
+
+        }
 
 		$content = Views::get(
 			__DIR__ . '/../View/Index.php',

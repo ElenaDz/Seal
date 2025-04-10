@@ -13,7 +13,7 @@ class PageProduct extends _Base
 		// fixme нет обработки случая когда продукт не найден
         $product = Products::getById($id);
 
-        if (empty($products)) {
+        if (empty($product)) {
             // fixme создать ошибку
 
         }

@@ -3,6 +3,7 @@ use APP\Entity\Product;
 
 /** @var Product $products */
 
+
 ?>
 
 <?=
@@ -21,13 +22,13 @@ use APP\Entity\Product;
 ?>
 
 <?=
-\SYS\Views::get(
-	__DIR__.'/Blocks/AboutCompany.php'
-);
+	\SYS\Views::get(
+		__DIR__.'/Blocks/AboutCompany.php'
+	);
 ?>
 
 <?=
-\SYS\Views::get(
-	__DIR__.'/Blocks/Map.php'
-);
+	\SYS\Views::get(
+		__DIR__.'/Blocks/Map.php'
+	);
 ?>

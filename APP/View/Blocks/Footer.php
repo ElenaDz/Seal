@@ -1,4 +1,9 @@
+<?php
+use APP\Entity\Product;
 
+/** @var Product[] $products */
+
+?>
 <div class="wrap_footer text-white">
     <div class="container">
         <footer class="py-4">
@@ -11,13 +16,14 @@
                         <div class="element">
                             <h5>ЗПУ</h5>
                             <ul class="nav flex-column">
-<!--                                fixme подумать, как передать продукт, чтобы сделать цикл-->
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">ТП 350-01</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">ТП 40 Закрутка</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">ТП 1200-01</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">ТП 2900-02</a></li>
+                                <?php foreach ($products as $product):  ?>
+                                    <li class="nav-item mb-2">
+                                        <a href="<?= \APP\Action\PageProduct::getUrl($product->getId())?>" class="nav-link p-0">
+                                            <?= $product->getTitle() ?>
+                                        </a>
+                                    </li>
+                                <?php endforeach ?>
                             </ul>
-
                         </div>
 
                         <div class="element">
