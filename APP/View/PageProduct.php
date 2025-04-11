@@ -36,8 +36,8 @@ use APP\Entity\Product;
         <?= $product->getDescription() ?>
 
         <div class="certificate_wrap">
-            <a href="/assets/certificate/<?= $product->getCertificate()?>">
-                <img src="/assets/certificate/<?= $product->getCertificate()?>" width="100%" height="100%"  alt="<?= $product->getCertificate()?>">
+            <a href="/assets/certificate/<?= $product->getCertificateUrl()?>">
+                <img src="/assets/certificate/<?= $product->getCertificateUrl()?>" width="100%" height="100%" alt="<?= $product->getCertificateUrl()?>">
             </a>
         </div>
     </div>

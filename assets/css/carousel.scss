@@ -25,8 +25,8 @@
 
     .carousel_seal_inner {
       position: absolute;
-      bottom: 70%;
-      left: -65%;
+      bottom: 150%;
+      left: -60%;
 
       .carousel_seal {
         width: 35%;
@@ -34,8 +34,6 @@
 
       h2 {
         color: white;
-        // fixme убрать текст очень плохо выглядит у меня
-        -webkit-text-stroke: 1px rgb(186, 40, 52);
       }
     }
   }

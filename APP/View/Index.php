@@ -27,6 +27,9 @@ use APP\Entity\Product;
 	);
 ?>
 
+<?php
+return
+?>
 <?=
 	\SYS\Views::get(
 		__DIR__.'/Blocks/Map.php'

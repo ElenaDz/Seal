@@ -1,6 +1,8 @@
 <?php
 
 require __DIR__.'/SYS/Autoload.php';
+require __DIR__.'/vendor/email-obfuscator-master/src/EmailObfuscator.php';
+use Kminek\EmailObfuscator ;
 
 \SYS\Autoload::register();
 

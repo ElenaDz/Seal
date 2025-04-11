@@ -36,6 +36,12 @@
                           нужно обфусцировать емейл например вот этим https://github.com/kminek/email-obfuscator -->
                     <b>tehnomarket.nhk@yandex.ru</b>
                 </a>
+<!--                Разбираюсь с работой обфусцирователя-->
+                <?php
+                $email = \Kminek\EmailObfuscator::obfuscate('tehnomarket.nhk@yandex.ru', 'почта для связи', ['class' => 'some-class', 'id' => 'some-id', 'noscript' => 'Custom noscript contents']);
+                echo $email;
+                ?>
+
             </div>
         </div>
         <div class="d-flex flex-column flex-sm-row justify-content-between py-2">
@@ -48,10 +54,10 @@
 
         </div>
 
-        <?=
-            \SYS\Views::get(
-                __DIR__.'/Blocks/Map.php'
-            );
-        ?>
+<!--        --><?php //=
+//            \SYS\Views::get(
+//                __DIR__.'/Blocks/Map.php'
+//            );
+//        ?>
 
     </div>

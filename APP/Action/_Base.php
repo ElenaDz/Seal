@@ -4,6 +4,7 @@ namespace APP\Action;
 
 use APP\Model\Products;
 use SYS\Views;
+use Kminek\EmailObfuscator;
 
 abstract class _Base
 {
@@ -20,7 +21,9 @@ abstract class _Base
                 'title' => $title,
                 'content' =>  $content,
                 'bread_crumbs' => $bread_crumbs,
-                'products' => $products
+                'products' => $products,
+                'email_obfuscator' => EmailObfuscator::class
+
             ]
         );
     }

@@ -39,8 +39,8 @@ class Product
         return $this->characteristics;
     }
 
-	// fixme должен возвращать url, переименовать
-    public function getCertificate()
+	// fixme должен возвращать url, переименовать ok
+    public function getCertificateUrl()
     {
         return $this->certificate;
     }

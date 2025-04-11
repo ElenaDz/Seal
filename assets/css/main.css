@@ -8,7 +8,7 @@
   color: black;
 }
 .location_wrap:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 
 .mail_wrap, .phone_wrap, .location_wrap {
@@ -26,7 +26,7 @@
   color: black;
 }
 .mail_wrap .mail_inner a:hover, .mail_wrap .phone_inner a:hover, .mail_wrap .location_inner a:hover, .phone_wrap .mail_inner a:hover, .phone_wrap .phone_inner a:hover, .phone_wrap .location_inner a:hover, .location_wrap .mail_inner a:hover, .location_wrap .phone_inner a:hover, .location_wrap .location_inner a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 
 @media (max-width: 992px) {
@@ -35,7 +35,7 @@
   }
 }
 .navbar {
-  background-color: #ba2834 !important;
+  background-color: rgb(186, 40, 52) !important;
 }
 .navbar .location, .navbar .mail, .navbar .phone {
   display: none;
@@ -58,15 +58,15 @@
   background-color: white;
 }
 .navbar li:hover a {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .nav-link.show {
   background-color: white;
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .dropdown-menu li a {
   background-color: white;
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .dropdown-menu li a:hover {
   background-color: #f1f1f1;
@@ -98,15 +98,14 @@
 }
 .carousel .carousel-inner .carousel_seal_inner {
   position: absolute;
-  bottom: 70%;
-  left: -65%;
+  bottom: 150%;
+  left: -60%;
 }
 .carousel .carousel-inner .carousel_seal_inner .carousel_seal {
   width: 35%;
 }
 .carousel .carousel-inner .carousel_seal_inner h2 {
   color: white;
-  -webkit-text-stroke: 1px #ba2834;
 }
 
 .wrap_footer {
@@ -120,7 +119,7 @@
   color: white;
 }
 .wrap_footer footer .mail_wrap .mail_inner a:hover, .wrap_footer footer .mail_wrap .phone_inner a:hover, .wrap_footer footer .phone_wrap .mail_inner a:hover, .wrap_footer footer .phone_wrap .phone_inner a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .wrap_footer footer .inner_footer {
   justify-content: space-between;
@@ -137,7 +136,7 @@
   color: white;
 }
 .wrap_footer footer .inner_footer .site_map a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .wrap_footer footer .inner_footer .call_back {
   width: 40%;
@@ -164,7 +163,7 @@
 }
 
 .breadcrumb .breadcrumb-item a {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .breadcrumb .active {
   color: black;
@@ -271,7 +270,7 @@
 }
 
 .contacts a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 
 header {
@@ -308,3 +307,9 @@ i {
   display: block;
   background-repeat: no-repeat;
 }
+
+.additional_info {
+  color: #797b87;
+}
+
+/*# sourceMappingURL=main.css.map */
