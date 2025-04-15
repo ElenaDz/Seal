@@ -8,11 +8,11 @@ class Email
 {
 	public static function send($subject, $message, $to)
 	{
-
 		require_once __DIR__ . '/../../vendor/PHPMailer/src/Exception.php';
 		require_once __DIR__ . '/../../vendor/PHPMailer/src/PHPMailer.php';
 		require_once __DIR__ . '/../../vendor/PHPMailer/src/SMTP.php';
 
+        $subject = implode(', ', $subject);
 		$mail = new PHPMailer(true);
 
 		$mail->CharSet    = PHPMailer::CHARSET_UTF8;
@@ -27,6 +27,8 @@ class Email
 		// завести новый пароль для приложения почты здесь https://passport.yandex.ru/profile/access использовать здесь
 		// старый пароль от яндекса при этом не измениться, здесь заводятся дополнительные пароли к основному, чтобы не светить основной
 		// для отладки подойдет твой, для релиза нужно будет попросить заказчика сделать это
+		// так же надо включить настройку "Разрешить доступ к почтовому ящику с помощью почтовых клиентов" в настройках яндекс почты
+		$mail->Password   = 'dmeiuzugqgameyar';
 		$mail->Password   = 'obalonapxnqcjskw';
 		$mail->Port       = 587;
 
