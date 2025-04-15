@@ -10,11 +10,14 @@ class Contact
     private $description = null;
     private $href;
 
+	// fixme снова использует автогенерацию гетеров, перестань это делать, получается ерунда
     public function getId()
     {
         return $this->id;
     }
 
+	// fixme нельзя внутренности БД выставлять наружу, этот метод пускай будет private вместо него нужно создать методы
+	//  isPhone и тд и использовать их
     public function getType()
     {
         return $this->type;
@@ -25,6 +28,7 @@ class Contact
         return $this->name;
     }
 
+	// fixme не используется удалить
     public function getDescription() :string
     {
         return $this->description;
@@ -34,5 +38,4 @@ class Contact
     {
         return $this->href;
     }
-
 }

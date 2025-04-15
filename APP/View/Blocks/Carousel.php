@@ -5,12 +5,14 @@ use APP\Entity\Product;
 
 ?>
 <div id="carouselExampleCaptions" class="carousel slide shadow mb-5 bg-white rounded " data-bs-ride="carousel">
+
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
+
     <div class="carousel-inner">
         <?php foreach ($products as $index => $product):  ?>
         <div class="carousel-item <?= $index === 0 ? 'active' : '';?>">
@@ -29,10 +31,10 @@ use APP\Entity\Product;
         </div>
         <?php endforeach ?>
     </div>
-    <!-- fixme удали кнопку предыдущий так как выглядит не аккуратно когда стрелка перекрывает картинки пломб, тем более здесь ссылка на пломбе ok -->
 
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Следующий</span>
     </button>
+
 </div>

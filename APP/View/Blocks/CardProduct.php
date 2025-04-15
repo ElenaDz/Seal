@@ -7,7 +7,6 @@ use APP\Entity\Product;
 
 <div class="card shadow p-3 mb-5 bg-white rounded">
     <a href="<?= \APP\Action\PageProduct::getUrl($product->getId())?>">
-        <!-- fixme в качестве alt текст обычно используется что то вроде "фото продукта <название продукта>" ок -->
         <img
             src="<?= $product->getCoverUrl() ?>"
             class="card-img-top"

@@ -19,8 +19,6 @@
 
                         <div class="col-12">
                             <div class="controls">
-                                <!-- fixme нужно чтобы в полей стразу отображалось +7 так как иначе если вводить номер не с 7 а сразу с любой другой цифры она теряется вместо
-                                       нее появляться +7 и это очень бесит когда вводишь не глядя на экран ок-->
                                 <input
                                     pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
                                     data-mask=" (999) 999-99-99"
@@ -38,17 +36,22 @@
                     </div>
 
                     <div class="form-group mt-3 d-flex justify-content-end mb-3">
-                        <!-- fixme тут лучше текст "Оставить заявку" ок -->
                         <button  type="submit" class="btn btn_base">Оставить заявку</button>
 
                     </div>
 
                     <label class="additional_info" for="152fz">
-                        <input id='152fz'  type="checkbox" value="" checked>
-                        Нажимая на кнопку «Отправить» Вы даёте согласие на обработку персональных данных.*
-                        <p class="m-0" style="font-size: 13px">
-                           * в соответствии со статьей 9 ФЗ от 27 июля 2006 г. № 152 ФЗ «О персональных данных».
-                        </p>
+                        <input
+                                id='152fz'
+                                type="checkbox"
+                                value=""
+                                checked
+                                required
+                        >
+                        Нажимая на кнопку «Отправить» Вы даёте согласие на обработку персональных данных
+                        <small class="m-0" style="font-size: 13px">
+                           (в соответствии со статьей 9 ФЗ от 27 июля 2006 г. № 152 ФЗ «О персональных данных»)
+                        </small>
                     </label>
 
                     <input type="hidden" name="af_action" value="cf7d1da720b9bd2676bea895e2082f4c">
@@ -61,8 +64,6 @@
 </div>
 
 <script>
-//    Код Семёна
-    // fixme указать ссылку откуда взят код если есть (ссылки нет)
     const phoneInput = document.getElementById('phone');
 
     phoneInput.addEventListener('input', () => {

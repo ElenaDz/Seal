@@ -31,7 +31,6 @@ use SYS\Views;
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<!-- fixme есть крошечный горизонтальная прокрутка на мобильной версии, нужно избавиться от нее ok-->
 <body>
 
     <header>

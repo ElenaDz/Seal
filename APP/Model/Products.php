@@ -25,7 +25,6 @@ class Products extends _Base
      * @param int $id
      * @return Product
      */
-	// fixme удалить тип возвращаемого значения ok
     public static function getById(int $id)
     {
         $results = self::getPDO()->query(

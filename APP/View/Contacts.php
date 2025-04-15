@@ -37,13 +37,18 @@ use APP\Entity\Contact;
 
                 <div class="row my-3">
                     <div class="col-2 w-auto"><img class="float-end" src="/assets/img/connection/mail.svg" alt="" height="25px"></div>
+                    <!-- fixme для посетителя сайта после обфускации ни чего не должно измениться он должен видеть тоже, что было до обфускации-->
                     <div class="col-10">
                         <a href="mailto:<?= $contact->getHref()?>">
                             <b><?= $contact->getName() ?></b>
                         </a>
-                        <!--                Разбираюсь с работой обфусцирователя-->
+                        <!-- fixme перенеси работу с обфускатором в класс сущности Contact -->
                         <?php
-                            $email = \Kminek\EmailObfuscator::obfuscate( $contact->getName(), 'почта для связи', ['class' => 'some-class', 'id' => 'some-id', 'noscript' => 'Custom noscript contents']);
+                            $email = \Kminek\EmailObfuscator::obfuscate(
+                                $contact->getName(),
+                                'почта для связи',
+                                ['class' => 'some-class', 'id' => 'some-id', 'noscript' => 'Custom noscript contents']
+                            );
                             echo $email;
                         ?>
                     </div>

@@ -6,6 +6,7 @@ use APP\Entity\Product;
 /** @var Product[] $products */
 /** @var Contact[] $contacts */
 
+// fixme в футоре блоки должны выстаиваться в столбик на мобильной версии с выравниванием по центру или слева
 ?>
 <div class="wrap_footer text-white">
     <div class="container">

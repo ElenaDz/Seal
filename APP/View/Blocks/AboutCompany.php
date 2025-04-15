@@ -7,7 +7,7 @@
 
             <div class="d-flex flex-column">
                 <p class="ptsans">ТЕХНО ЗПУ</p>
-                <img src="../../../assets/img/about/factory.png" alt="factory">
+
             </div>
         </div>
     </div>
