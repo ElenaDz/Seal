@@ -3,9 +3,12 @@
 
         <div class="col-12 w-100 col-lg-6 margin_unset">
 
-            <h1 class="h3 montserat"><b>О компании</b></h1>
+            <h1 class="h3 mb-2 montserat"><b>О компании</b></h1>
 
-            <p class="ptsans">ТЕХНО ЗПУ
+            <div class="d-flex flex-column">
+                <p class="ptsans">ТЕХНО ЗПУ</p>
+                <img src="../../../assets/img/about/factory.png" alt="factory">
+            </div>
         </div>
     </div>
 </div>

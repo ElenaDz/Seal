@@ -1,9 +1,12 @@
 <?php
+
+use APP\Entity\Contact;
 use APP\Entity\Product;
 
 /** @var Product $products */
-
+/** @var Contact[] $contacts */
 ?>
+
 <nav class="navbar p-0  navbar-expand-lg bg-body-tertiary">
 
     <div class="container">
@@ -43,21 +46,22 @@ use APP\Entity\Product;
                         <a class="nav-link" href="#"> <b>Находка</b> ул. Спортивная, д. 51а</a>
                     </li>
 
-                    <li class="nav-item phone">
-                        <a class="nav-link" href="tel:+74236702701"><b>+7 (4236) 702-701</b></a>
-                    </li>
+                    <?php foreach ($contacts as $contact): ?>
+                        <?php if ($contact->getType() === 'Phone'):?>
+                            <li class="nav-item phone">
+                                <a href="tel:<?= $contact->getHref()?>" class="nav-link">
+                                    <b><?= $contact->getName() ?></b>
+                                </a>
+                            </li>
+                        <?php elseif ($contact->getType() === 'Mail'): ?>
 
-                    <li class="nav-item mail">
-                        <a class="nav-link" href="mailto:office@tehno-nhk.ru">
-                            <b>office@tehno-nhk.ru</b>
-                        </a>
-                    </li>
-
-                    <li  class="nav-item mail">
-                        <a class="nav-link" href="mailto:tehnomarket.nhk@yandex.ru">
-                            <b>tehnomarket.nhk@yandex.ru</b>
-                        </a>
-                    </li>
+                            <li class="nav-item mail">
+                                <a class="nav-link" href="mailto:<?= $contact->getHref()?>">
+                                    <b><?= $contact->getName() ?></b>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>

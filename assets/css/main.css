@@ -12,7 +12,11 @@
 }
 
 .mail_wrap, .phone_wrap, .location_wrap {
-  width: 200px;
+  width: 185px;
+  padding-left: 5px;
+}
+.mail_wrap img, .phone_wrap img, .location_wrap img {
+  width: 30px !important;
 }
 .mail_wrap .mail_inner, .mail_wrap .phone_inner, .mail_wrap .location_inner, .phone_wrap .mail_inner, .phone_wrap .phone_inner, .phone_wrap .location_inner, .location_wrap .mail_inner, .location_wrap .phone_inner, .location_wrap .location_inner {
   display: flex;
@@ -27,6 +31,25 @@
 }
 .mail_wrap .mail_inner a:hover, .mail_wrap .phone_inner a:hover, .mail_wrap .location_inner a:hover, .phone_wrap .mail_inner a:hover, .phone_wrap .phone_inner a:hover, .phone_wrap .location_inner a:hover, .location_wrap .mail_inner a:hover, .location_wrap .phone_inner a:hover, .location_wrap .location_inner a:hover {
   color: rgb(186, 40, 52);
+}
+
+.mail_wrap {
+  width: fit-content !important;
+}
+.mail_wrap .mail_inner {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+.mail_wrap .mail_inner a {
+  width: 100%;
+  height: 50%;
+  text-align: start;
+}
+
+.inner_footer .mail_wrap .mail_inner {
+  width: auto;
+  flex-direction: row;
 }
 
 @media (max-width: 992px) {
@@ -140,6 +163,7 @@
 }
 .wrap_footer footer .inner_footer .call_back {
   width: 40%;
+  padding-left: 0;
 }
 .wrap_footer footer .telegram {
   background-image: url("/assets/img/socialmedia/telegram-white.svg");
@@ -273,6 +297,24 @@
   color: rgb(186, 40, 52);
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format(".ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-ital";
+  src: url("../fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf") format(".ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Great Vibes";
+  src: url("../fonts/Great_Vibes/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 header {
   padding: 20px 0 0 0;
   background-color: white;
@@ -301,6 +343,18 @@ ul {
   height: 50px;
   margin-right: 10px;
   object-fit: cover;
+}
+
+.slogan {
+  font-family: "Great Vibes", "Roboto-ital", "sans-serif";
+  font-size: 24px;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+}
+.slogan p {
+  flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 i {

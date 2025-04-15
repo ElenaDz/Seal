@@ -28,10 +28,10 @@ class Product
         return $this->description;
     }
 
-	// fixme этот метод должен возвращать то чем удобно пользоваться программиста, а именно url картинки, а не имя файла
-    public function getCover()
+	// fixme этот метод должен возвращать то чем удобно пользоваться программиста, а именно url картинки, а не имя файла ok
+    public function getCoverUrl()
     {
-        return $this->cover;
+        return "/assets/img/seal/$this->cover";
     }
 
     public function getCharacteristics()
@@ -42,6 +42,6 @@ class Product
 	// fixme должен возвращать url, переименовать ok
     public function getCertificateUrl()
     {
-        return $this->certificate;
+        return "/assets/certificate/$this->certificate";
     }
 }

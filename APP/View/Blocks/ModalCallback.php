@@ -7,12 +7,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
-                <form id="phoneForm" action="" method="post" class="ajax_form af_example">
+                <form id="phoneForm" action="<?= \APP\Action\SendOrder::getUrl(); ?>" method="post" class="ajax_form af_example">
 
                     <div class="row">
                         <div class="col-12 mb-3">
                             <div class="controls">
-                                <input type="text" id="af_name" name="name2" value="" placeholder="Ваше имя" class="form-control" required="">
+                                <input type="text" id="af_name" name="name" value="" placeholder="Ваше имя" class="form-control" required="">
                                 <span class="error_name"></span>
                             </div>
                         </div>

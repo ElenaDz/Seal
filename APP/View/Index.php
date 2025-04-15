@@ -8,7 +8,10 @@ use APP\Entity\Product;
 
 <?=
 	\SYS\Views::get(
-		__DIR__.'/Blocks/Carousel.php'
+		__DIR__.'/Blocks/Carousel.php',
+		[
+			'products' => $products
+		]
 	);
 ?>
 
@@ -27,9 +30,6 @@ use APP\Entity\Product;
 	);
 ?>
 
-<?php
-return
-?>
 <?=
 	\SYS\Views::get(
 		__DIR__.'/Blocks/Map.php'

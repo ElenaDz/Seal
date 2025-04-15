@@ -8,7 +8,7 @@ use APP\Entity\Product;
     <div class="d-flex cover_wrap">
 
         <div class="cover">
-            <img src="/assets/img/seal/<?= $product->getCover()?>" width="100%" height="100%"  alt="">
+            <img src="<?= $product->getCoverUrl()?>" width="100%" height="100%" alt="">
         </div>
 
         <div class="characteristics_wrap">
@@ -36,8 +36,8 @@ use APP\Entity\Product;
         <?= $product->getDescription() ?>
 
         <div class="certificate_wrap">
-            <a href="/assets/certificate/<?= $product->getCertificateUrl()?>">
-                <img src="/assets/certificate/<?= $product->getCertificateUrl()?>" width="100%" height="100%" alt="<?= $product->getCertificateUrl()?>">
+            <a href="<?= $product->getCertificateUrl()?>">
+                <img src="<?= $product->getCertificateUrl()?>" width="100%" height="100%" alt="<?= $product->getCertificateUrl()?>">
             </a>
         </div>
     </div>

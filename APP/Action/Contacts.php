@@ -8,10 +8,12 @@ class Contacts extends _Base
 {
     public  function __invoke() {
 
+        $contacts = \APP\Model\Contacts::getAll();
+
         $content = Views::get(
             __DIR__ . '/../View/Contacts.php',
             [
-
+                'contacts' => $contacts
             ]
         );
 

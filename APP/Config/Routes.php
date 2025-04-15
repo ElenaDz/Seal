@@ -5,6 +5,7 @@ use APP\Action\About;
 use APP\Action\Contacts;
 use APP\Action\Index;
 use APP\Action\PageProduct;
+use APP\Action\SendOrder;
 use APP\Action\User;
 use APP\Action\UserLogin;
 use APP\Action\UserLogout;
@@ -31,6 +32,11 @@ class Routes
                 Contacts::getUrl(),
                 Contacts::class
             ],
+            [
+                SendOrder::getUrl(),
+                SendOrder::class
+            ],
+
 	        [
 		        User::getUrl(),
 		        User::class,

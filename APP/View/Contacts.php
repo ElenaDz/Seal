@@ -1,5 +1,8 @@
 <?php
 
+use APP\Entity\Contact;
+
+/** @var Contact[] $contacts */
 ?>
 
 <div class="contacts py-3">
@@ -18,46 +21,56 @@
         <div class="row my-3">
             <div class="d-flex col-10">
                 <p class="me-2 mb-0">Телефон:</p>
-                <a class="contact_link" href="tel:+74236702701">+7 (4236) 702-701</a></div>
-        </div>
+                <?php foreach ($contacts as $contact): ?>
+                    <?php if ($contact->getType() === 'Phone'):?>
 
-        <div class="row my-3">
-            <div class="col-2 w-auto"><img class="float-end" src="/assets/img/connection/mail.svg" alt="" height="25px"></div>
-            <div class="col-10"><a href="mailto:office@tehno-nhk.ru">
-                    <!-- fixme контактный данные раскиданы по всему сайту Лучше указать их в файле конфигурации и брать оттуда -->
-                    <b>office@tehno-nhk.ru</b>
-                </a>
+                        <a href="tel:<?= $contact->getHref()?>" class="contact_link">
+                            <b><?= $contact->getName() ?></b>
+                        </a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
-        <div class="row my-3">
-            <div class="col-2 w-auto"><img class="float-end" src="/assets/img/connection/mail.svg" alt="" height="25px"></div>
-            <div class="col-10"><a href="mailto:tehnomarket.nhk@yandex.ru">
-                    <!-- fixme нельзя публиковать открыть емейл на сайте, в сети множество спам ботов которые лазят по сайтам и ищут емейлы,
-                          нужно обфусцировать емейл например вот этим https://github.com/kminek/email-obfuscator -->
-                    <b>tehnomarket.nhk@yandex.ru</b>
-                </a>
-<!--                Разбираюсь с работой обфусцирователя-->
-                <?php
-                $email = \Kminek\EmailObfuscator::obfuscate('tehnomarket.nhk@yandex.ru', 'почта для связи', ['class' => 'some-class', 'id' => 'some-id', 'noscript' => 'Custom noscript contents']);
-                echo $email;
-                ?>
 
-            </div>
-        </div>
+        <?php foreach ($contacts as $contact): ?>
+            <?php if ($contact->getType() === 'Mail'):?>
+
+                <div class="row my-3">
+                    <div class="col-2 w-auto"><img class="float-end" src="/assets/img/connection/mail.svg" alt="" height="25px"></div>
+                    <div class="col-10">
+                        <a href="mailto:<?= $contact->getHref()?>">
+                            <b><?= $contact->getName() ?></b>
+                        </a>
+                        <!--                Разбираюсь с работой обфусцирователя-->
+                        <?php
+                            $email = \Kminek\EmailObfuscator::obfuscate( $contact->getName(), 'почта для связи', ['class' => 'some-class', 'id' => 'some-id', 'noscript' => 'Custom noscript contents']);
+                            echo $email;
+                        ?>
+                    </div>
+                </div>
+
+            <?php endif; ?>
+        <?php endforeach; ?>
+
         <div class="d-flex flex-column flex-sm-row justify-content-between py-2">
 
             <ul class="list-unstyled d-flex">
                 Соцсети:
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="telegram social_icon bi"></i></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="whatsapp social_icon bi"></i></a></li>
-            </ul>
+                <?php foreach ($contacts as $contact): ?>
+                    <?php if ($contact->getType() === 'Social media'):?>
 
+                        <li class="ms-3"><a class="link-body-emphasis" href="<?= $contact->getName() ?>"><i class="telegram social_icon bi"></i></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="<?= $contact->getName() ?>"><i class="whatsapp social_icon bi"></i></a></li>
+
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </ul>
         </div>
 
-<!--        --><?php //=
-//            \SYS\Views::get(
-//                __DIR__.'/Blocks/Map.php'
-//            );
-//        ?>
+        <?=
+            \SYS\Views::get(
+                __DIR__.'/Blocks/Map.php'
+            );
+        ?>
 
     </div>

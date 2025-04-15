@@ -11,6 +11,9 @@ abstract class _Base
     public static function showLayoutMain($title, $content, $bread_crumbs = [])
     {
         $products = Products::getAllBySelect('id, title');
+
+        $contacts = \APP\Model\Contacts::getAll();
+
         if (empty($products)) {
             // fixme создать ошибку
         }
@@ -22,6 +25,7 @@ abstract class _Base
                 'content' =>  $content,
                 'bread_crumbs' => $bread_crumbs,
                 'products' => $products,
+                'contacts' => $contacts,
                 'email_obfuscator' => EmailObfuscator::class
 
             ]

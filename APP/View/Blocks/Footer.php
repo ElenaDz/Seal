@@ -1,7 +1,10 @@
 <?php
+
+use APP\Entity\Contact;
 use APP\Entity\Product;
 
 /** @var Product[] $products */
+/** @var Contact[] $contacts */
 
 ?>
 <div class="wrap_footer text-white">
@@ -42,21 +45,29 @@ use APP\Entity\Product;
                     <div class="phone_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center">
                         <div class="col-2 p-0"><img src="/assets/img/connection/mphone-white.svg" class="top-icon" alt=""></div>
                         <div class="phone_inner col-10 ps-2 pe-0 font08">
-                            <a href="tel:+74236702701" class="color_black">
-                                <b>+7 (4236) 702-701</b>
-                            </a><br>
+                            <?php foreach ($contacts as $contact): ?>
+                                <?php if ($contact->getType() === 'Phone'):?>
+
+                                    <a href="tel:<?= $contact->getHref()?>" class="color_black">
+                                        <b><?= $contact->getName() ?></b>
+                                    </a>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            <br>
                             <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">заказать звонок</a>
                         </div>
                     </div>
                     <div class="mail_wrap d-none d-sm-flex col-sm-4 mt-2 col-xl-2 col-xxl-2 row align-items-center">
-                        <div class="col-2 p-0"><img src="/assets/img/connection/mail-wite.svg" class="top-icon" alt="mail"></div>
+                        <div class="col-2 w-auto p-0"><img src="/assets/img/connection/mail-wite.svg" class="top-icon" alt="mail"></div>
                         <div class="mail_inner col-10 ps-2 pe-0 font08">
-                            <a href="mailto:office@tehno-nhk.ru">
-                                <b>office@tehno-nhk.ru</b>
-                            </a><br>
-                            <a href="mailto:tehnomarket.nhk@yandex.ru">
-                                <b>tehnomarket.nhk@yandex.ru</b>
-                            </a>
+                            <?php foreach ($contacts as $contact): ?>
+                                <?php if ($contact->getType() === 'Mail'):?>
+
+                                    <a href="mailto:<?= $contact->getHref()?>">
+                                        <b><?= $contact->getName() ?></b>
+                                    </a>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">

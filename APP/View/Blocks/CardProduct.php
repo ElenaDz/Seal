@@ -9,7 +9,7 @@ use APP\Entity\Product;
     <a href="<?= \APP\Action\PageProduct::getUrl($product->getId())?>">
         <!-- fixme в качестве alt текст обычно используется что то вроде "фото продукта <название продукта>" ок -->
         <img
-            src="/assets/img/seal/<?= $product->getCover() ?>"
+            src="<?= $product->getCoverUrl() ?>"
             class="card-img-top"
             alt="фото продукта <?= $product->getTitle() ?>"
         >
