@@ -8,8 +8,9 @@ class SendOrder
 {
     public  function __invoke()
     {
-
-       Email::send($_POST, 'sdsds', "Lenagosu@yandex.ru");
+        $phone = $_POST['phone'];
+        $name = $_POST['name'];
+       Email::send("Техно-ЗПУ. Заказан обратный звонок тел: $phone", "Заказан обратный звонок. <br> Номер: $phone <br> Имя: $name", "Lenagosu@yandex.ru");
     }
 
     public static function getUrl(): string
