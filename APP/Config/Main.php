@@ -5,6 +5,6 @@ class Main
 {
 	public static function getTitle(): string
     {
-		return 'Техно маркет';
+		return 'ТЕХНО ЗПУ';
 	}
 }

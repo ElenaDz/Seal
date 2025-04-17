@@ -8,7 +8,7 @@
   color: black;
 }
 .location_wrap:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 
 .mail_wrap, .phone_wrap, .location_wrap {
@@ -30,7 +30,7 @@
   color: black;
 }
 .mail_wrap .mail_inner a:hover, .mail_wrap .phone_inner a:hover, .mail_wrap .location_inner a:hover, .phone_wrap .mail_inner a:hover, .phone_wrap .phone_inner a:hover, .phone_wrap .location_inner a:hover, .location_wrap .mail_inner a:hover, .location_wrap .phone_inner a:hover, .location_wrap .location_inner a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 
 .mail_wrap {
@@ -58,7 +58,14 @@
   }
 }
 .navbar {
-  background-color: #ba2834 !important;
+  background-color: rgb(186, 40, 52) !important;
+}
+.navbar .sandwich {
+  border: 2px solid white;
+  box-shadow: none;
+}
+.navbar .sandwich .navbar-toggler-icon {
+  background-image: url("/assets/img/nav/menu.svg");
 }
 .navbar .location, .navbar .mail, .navbar .phone {
   display: none;
@@ -81,18 +88,25 @@
   background-color: white;
 }
 .navbar li:hover a {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .nav-link.show {
   background-color: white;
-  color: #ba2834;
+  color: rgb(186, 40, 52);
+}
+.navbar .dropdown-menu li span {
+  color: black;
 }
 .navbar .dropdown-menu li a {
   background-color: white;
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .navbar .dropdown-menu li a:hover {
   background-color: #f1f1f1;
+}
+.navbar .nav-item span {
+  background-color: white;
+  color: rgb(186, 40, 52);
 }
 
 @media (max-width: 992px) {
@@ -142,7 +156,7 @@
   color: white;
 }
 .wrap_footer footer .mail_wrap .mail_inner a:hover, .wrap_footer footer .mail_wrap .phone_inner a:hover, .wrap_footer footer .phone_wrap .mail_inner a:hover, .wrap_footer footer .phone_wrap .phone_inner a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .wrap_footer footer .inner_footer {
   justify-content: space-between;
@@ -155,11 +169,14 @@
 .wrap_footer footer .inner_footer .site_map .element {
   margin-right: 15px;
 }
+.wrap_footer footer .inner_footer .site_map .element span {
+  color: rgb(186, 40, 52);
+}
 .wrap_footer footer .inner_footer .site_map a {
   color: white;
 }
 .wrap_footer footer .inner_footer .site_map a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .wrap_footer footer .inner_footer .call_back {
   width: 40%;
@@ -178,6 +195,23 @@
   background-image: url("/assets/img/socialmedia/whatsapp_green.svg");
 }
 
+@media (max-width: 480px) {
+  .inner_footer {
+    flex-direction: column;
+  }
+  .inner_footer .site_map, .inner_footer .call_back {
+    justify-content: center !important;
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .inner_footer .product_wrap {
+    display: block !important;
+    margin: 10px 0;
+  }
+  .inner_footer .list-unstyled {
+    margin-left: 10px;
+  }
+}
 .card-group .card:not(:last-child) {
   margin-right: 10px;
 }
@@ -187,7 +221,7 @@
 }
 
 .breadcrumb .breadcrumb-item a {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
 }
 .breadcrumb .active {
   color: black;
@@ -294,7 +328,18 @@
 }
 
 .contacts a:hover {
-  color: #ba2834;
+  color: rgb(186, 40, 52);
+}
+
+.factory_wrap .factory {
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+  width: 50%;
+  height: 50%;
+}
+.factory_wrap p {
+  margin-top: 0;
 }
 
 @font-face {
@@ -365,3 +410,5 @@ i {
 .additional_info {
   color: #797b87;
 }
+
+/*# sourceMappingURL=main.css.map */

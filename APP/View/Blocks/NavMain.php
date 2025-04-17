@@ -10,9 +10,9 @@ use APP\Entity\Product;
 <nav class="navbar p-0  navbar-expand-lg bg-body-tertiary">
 
     <div class="container">
-        <div class="">
+        <div class="p-2">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+            <button class="navbar-toggler sandwich" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -26,20 +26,33 @@ use APP\Entity\Product;
                         <ul class="dropdown-menu">
                             <?php foreach ($products as $product):  ?>
                                 <li>
-                                    <a class="dropdown-item" href="<?= \APP\Action\PageProduct::getUrl($product->getId())?>">
-                                        <?= $product->getTitle() ?>
-                                    </a>
+                                    <?php if ($_SERVER["REQUEST_URI"] == \APP\Action\PageProduct::getUrl($product->getId())):?>
+                                        <span class="dropdown-item"> <?= $product->getTitle() ?></span>
+                                    <?php else: ?>
+                                        <a class="dropdown-item" href="<?= \APP\Action\PageProduct::getUrl($product->getId())?>">
+                                            <?= $product->getTitle() ?>
+                                        </a>
+                                    <?php endif;?>
+
                                 </li>
                             <?php endforeach ?>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= \APP\Action\About::getUrl() ?>">О Компании</a>
+                        <?php if ($_SERVER["REQUEST_URI"] == \APP\Action\About::getUrl()):?>
+                            <span class="nav-link">О Компании</span>
+                        <?php else: ?>
+                            <a class="nav-link" href="<?= \APP\Action\About::getUrl() ?>">О Компании</a>
+                        <?php endif;?>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= \APP\Action\Contacts::getUrl() ?>">Контакты</a>
+                        <?php if ($_SERVER["REQUEST_URI"] == \APP\Action\Contacts::getUrl()):?>
+                            <span class="nav-link">Контакты</span>
+                        <?php else: ?>
+                            <a class="nav-link" href="<?= \APP\Action\Contacts::getUrl() ?>">Контакты</a>
+                        <?php endif;?>
                     </li>
 
                     <li class="nav-item location">

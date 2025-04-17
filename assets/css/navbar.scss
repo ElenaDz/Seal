@@ -2,6 +2,15 @@
 .navbar {
   background-color: rgb(186, 40, 52) !important;
 
+  .sandwich {
+    border: 2px solid white;
+    box-shadow: none;
+
+    .navbar-toggler-icon {
+      background-image: url("/assets/img/nav/menu.svg");
+    }
+  }
+
   .location, .mail, .phone {
    display: none;
   }
@@ -43,6 +52,10 @@
   .dropdown-menu {
 
     li {
+      span {
+        color: black;
+      }
+
       a {
         background-color: white;
         color: rgb(186, 40, 52);
@@ -51,6 +64,13 @@
           background-color: #f1f1f1;
         }
       }
+    }
+  }
+
+  .nav-item {
+    span {
+      background-color: white;
+      color: rgb(186, 40, 52);
     }
   }
 }

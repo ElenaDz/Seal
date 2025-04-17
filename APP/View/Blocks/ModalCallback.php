@@ -56,9 +56,10 @@
 
                     <input type="hidden" name="af_action" value="cf7d1da720b9bd2676bea895e2082f4c">
                 </form>
+                <div id="response" role="alert">
 
+                </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -102,5 +103,37 @@
             e.preventDefault();
             alert('Введите номер в формате: +7 (999) 999-99-99');
         }
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#phoneForm').on('submit', function(e) {
+            e.preventDefault(); // Отключаем стандартную отправку
+
+            const $form = $(this);
+            const url = $form.attr('action');
+            const method = $form.attr('method') || 'POST'; // по умолчанию POST
+
+            $.ajax({
+                url: url,
+                type: method,
+                data: $form.serialize(),
+                success: function(response) {
+                    $form.hide()
+                    $('#response').addClass('alert alert-success')
+                    $('#response').html('<p>Успешно отправлено!</p><p>' + response + '</p>');
+                },
+                error: function(xhr, status, error) {
+                    $form.hide()
+                    $('#response').addClass('alert alert-danger')
+                    $('#response').html(
+                        '<p>' +
+                        'Не удалось сделать заявку на звонок, попробуйте позвонить по телефону или  написать на почту' +
+                        '</p>');
+                }
+            });
+        return false
+        });
     });
 </script>

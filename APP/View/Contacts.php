@@ -13,7 +13,7 @@ use APP\Entity\Contact;
                 <p class="me-2 mb-0">Адрес:</p>
                 <a href="https://go.2gis.com/4r1Xm">
                     <p class="m-0">
-                         692904, Приморский край, г. Находка,&nbsp;<span>ул. Спортивная, д. 51а</span>
+                         692904, Приморский край, г. Находка,&nbsp;<span>Находкинский проспект дом 12 офис 94</span>
                     </p>
                 </a>
             </div>
@@ -37,20 +37,10 @@ use APP\Entity\Contact;
 
                 <div class="row my-3">
                     <div class="col-2 w-auto"><img class="float-end" src="/assets/img/connection/mail.svg" alt="" height="25px"></div>
-                    <!-- fixme для посетителя сайта после обфускации ни чего не должно измениться он должен видеть тоже, что было до обфускации-->
+                    <!-- fixme для посетителя сайта после обфускации ни чего не должно измениться он должен видеть тоже, что было до обфускации ok-->
                     <div class="col-10">
-                        <a href="mailto:<?= $contact->getHref()?>">
-                            <b><?= $contact->getName() ?></b>
-                        </a>
-                        <!-- fixme перенеси работу с обфускатором в класс сущности Contact -->
-                        <?php
-                            $email = \Kminek\EmailObfuscator::obfuscate(
-                                $contact->getName(),
-                                'почта для связи',
-                                ['class' => 'some-class', 'id' => 'some-id', 'noscript' => 'Custom noscript contents']
-                            );
-                            echo $email;
-                        ?>
+                        <!-- fixme перенеси работу с обфускатором в класс сущности Contact ok-->
+                        <?= $contact->getMail() ?>
                     </div>
                 </div>
 
@@ -58,17 +48,18 @@ use APP\Entity\Contact;
         <?php endforeach; ?>
 
         <div class="d-flex flex-column flex-sm-row justify-content-between py-2">
-
             <ul class="list-unstyled d-flex">
                 Соцсети:
-                <?php foreach ($contacts as $contact): ?>
-                    <?php if ($contact->getType() === 'Social media'):?>
-
-                        <li class="ms-3"><a class="link-body-emphasis" href="<?= $contact->getName() ?>"><i class="telegram social_icon bi"></i></a></li>
-                        <li class="ms-3"><a class="link-body-emphasis" href="<?= $contact->getName() ?>"><i class="whatsapp social_icon bi"></i></a></li>
-
-                    <?php endif; ?>
-                <?php endforeach; ?>
+                        <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://t.me/tehnomarketnhk" target="_blank">
+                                <i class="telegram social_icon bi"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://wa.me/79020702701" target="_blank">
+                                <i class="whatsapp social_icon bi"></i>
+                            </a>
+                        </li>
             </ul>
         </div>
 
