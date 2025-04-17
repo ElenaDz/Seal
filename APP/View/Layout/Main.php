@@ -23,7 +23,7 @@ use SYS\Views;
     <script src="/assets/bootstrap-5.3.5-dist/js/bootstrap.min.js?v=<?= filemtime(__DIR__ . '/../../../assets/bootstrap-5.3.5-dist/js/bootstrap.min.js')?>"></script>
 
     <link rel="stylesheet" href="/assets/css/main.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/main.css')?>">
-    <link rel="icon" href="/assets/img/logo/logo-mini.png" type="image/x-icon">
+    <link rel="icon" href="../../../assets/img/logo/zpu/logo-mini.png" type="image/x-icon">
 
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <script  src="/assets/jquery/jquery-3.7.1.min.js"></script>

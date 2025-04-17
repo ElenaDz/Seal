@@ -14,7 +14,7 @@ use APP\Entity\Product;
             <div class="row inner_footer">
                 <div class="site_map">
                     <div class="me-2">
-                        <img class="logo" src="/assets/img/logo/logo-white.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                        <img class="logo" src="../../../assets/img/logo/zpu/logo-white.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
                     </div>
 
                     <div class="product_wrap d-flex flex-wrap">

@@ -13,10 +13,10 @@ use APP\Entity\Contact;
 
             <?php if ($_SERVER['REQUEST_URI'] !== \APP\Action\Index::getUrl()): ?>
                 <a href="<?= \APP\Action\Index::getUrl()?>">
-                    <img class="logo" src="/assets/img/logo/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                    <img class="logo" src="../../../assets/img/logo/zpu/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
                 </a>
             <?php else: ?>
-                <img class="logo" src="/assets/img/logo/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                <img class="logo" src="../../../assets/img/logo/zpu/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
             <?php endif;?>
         </div>
 
