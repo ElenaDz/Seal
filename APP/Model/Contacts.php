@@ -23,7 +23,6 @@ class Contacts extends _Base
 
     public static function getByType($type)
     {
-		// fixme а где защита от sql иньекций ?
         $results = self::getPDO()->query(
             'SELECT * FROM contacts
                     where contacts.type = '.$type

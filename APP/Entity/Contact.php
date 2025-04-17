@@ -2,6 +2,8 @@
 
 namespace APP\Entity;
 
+use APP\Config\Main;
+
 class Contact
 {
     private $id;
@@ -9,11 +11,6 @@ class Contact
     private $name;
     private $description = null;
     private $href;
-
-	// fixme снова использует автогенерацию гетеров, перестань это делать, получается ерунда
-
-	// fixme нельзя внутренности БД выставлять наружу, этот метод пускай будет private вместо него нужно создать методы
-	//  isPhone и тд и использовать их (после сдачи)
 
     public function getType()
     {
@@ -32,9 +29,15 @@ class Contact
 
     public function getMail()
     {
+        $name = $this->getName();
+
+        if ($name === "tehnomarket.nhk@yandex.ru") {
+            $name = Main::getMail();
+        }
+
         return \Kminek\EmailObfuscator::obfuscate(
-            $this->getHref(),
-            '<b>' . $this->getName() . '</b>'
+            $name,
+            '<b>' . $name . '</b>'
         );
     }
 }

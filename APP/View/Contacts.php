@@ -37,9 +37,7 @@ use APP\Entity\Contact;
 
                 <div class="row my-3">
                     <div class="col-2 w-auto"><img class="float-end" src="/assets/img/connection/mail.svg" alt="" height="25px"></div>
-                    <!-- fixme для посетителя сайта после обфускации ни чего не должно измениться он должен видеть тоже, что было до обфускации ok-->
                     <div class="col-10">
-                        <!-- fixme перенеси работу с обфускатором в класс сущности Contact ok-->
                         <?= $contact->getMail() ?>
                     </div>
                 </div>

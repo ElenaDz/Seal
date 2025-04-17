@@ -13,16 +13,15 @@ use APP\Entity\Contact;
 
             <?php if ($_SERVER['REQUEST_URI'] !== \APP\Action\Index::getUrl()): ?>
                 <a href="<?= \APP\Action\Index::getUrl()?>">
-                    <img class="logo" src="../../../assets/img/logo/zpu/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                    <img class="logo" src="../../../assets/img/logo/dv/dv-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
                 </a>
             <?php else: ?>
-                <img class="logo" src="../../../assets/img/logo/zpu/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                <img class="logo" src="../../../assets/img/logo/dv/dv-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
             <?php endif;?>
         </div>
 
         <div class="slogan d-flex justify-content-center align-items-center">
             <p class=" d-flex justify-content-center m-0">
-                <!-- fixme заменить на картинку, так как сейчас используется шрифт размером 446кб это оооооочень много, добавил файл -->
                 Мы заботимся о сохранности вашего груза
             </p>
         </div>

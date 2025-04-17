@@ -15,8 +15,11 @@ abstract class _Base
 		if (empty(self::$pdo)) {
 			self::$pdo = new PDO(
 				'mysql:host=localhost;dbname=seal',
-				'seal',
-				's3*LNt$9'
+				'root',
+				'',
+				[
+                    PDO::ATTR_PERSISTENT => true
+                ]
 			);
 		}
 		return self::$pdo;

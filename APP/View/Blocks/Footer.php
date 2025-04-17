@@ -6,7 +6,6 @@ use APP\Entity\Product;
 /** @var Product[] $products */
 /** @var Contact[] $contacts */
 
-// fixme в футоре блоки должны выстаиваться в столбик на мобильной версии с выравниванием по центру или слева ок
 ?>
 <div class="wrap_footer text-white">
     <div class="container">
@@ -14,7 +13,7 @@ use APP\Entity\Product;
             <div class="row inner_footer">
                 <div class="site_map">
                     <div class="me-2">
-                        <img class="logo" src="../../../assets/img/logo/zpu/logo-white.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                        <img class="logo" src="../../../assets/img/logo/dv/dv-white.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
                     </div>
 
                     <div class="product_wrap d-flex flex-wrap">

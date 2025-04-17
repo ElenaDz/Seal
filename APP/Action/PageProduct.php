@@ -12,8 +12,6 @@ class PageProduct extends _Base
     {
         $product = Products::getById($id);
         if (empty($product)) {
-            // fixme создать ошибку
-
         }
 
         $content = Views::get(
@@ -29,7 +27,6 @@ class PageProduct extends _Base
             $content,
             [
                 [
-					// fixme если значений 2 то проще было было так, без магических строк name и url
 	                // [
 	                //      Index::getUrl() => 'Главная',
 	                //      $product->getTitle()

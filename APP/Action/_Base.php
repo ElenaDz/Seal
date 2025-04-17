@@ -15,7 +15,6 @@ abstract class _Base
         $contacts = \APP\Model\Contacts::getAll();
 
         if (empty($products)) {
-            // fixme создать ошибку
         }
 
         echo Views::get(
