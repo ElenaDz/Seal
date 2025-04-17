@@ -40,7 +40,6 @@ use APP\Entity\User;
 
                     <?php else: ?>
 
-                        <!-- todo сделать чтобы эта кнопка работала (после сдачи)-->
                         <form action="#" method="post" style="display: inline-block">
                             <input type="submit" name="" value="сделать менеджером">
                         </form>

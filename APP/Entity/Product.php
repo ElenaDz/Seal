@@ -22,7 +22,6 @@ class Product
         return $this->title;
     }
 
-	// fixme html в БД без необходимости недопустим (после сдачи)
     public function getDescription()
     {
         return $this->description;

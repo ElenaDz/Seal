@@ -10,7 +10,7 @@ class Index extends _Base
 	{
         $products = Products::getAll();
         if (empty($products)) {
-            // fixme создать ошибку
+
 
         }
 

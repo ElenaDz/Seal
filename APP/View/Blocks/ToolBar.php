@@ -22,7 +22,6 @@ use APP\Entity\Contact;
 
         <div class="slogan d-flex justify-content-center align-items-center">
             <p class=" d-flex justify-content-center m-0">
-                <!-- fixme заменить на картинку, так как сейчас используется шрифт размером 446кб это оооооочень много, добавил файл -->
                 Мы заботимся о сохранности вашего груза
             </p>
         </div>
