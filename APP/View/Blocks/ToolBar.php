@@ -31,7 +31,7 @@ use APP\Entity\Contact;
                 <a class="location_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center" href="<?= \APP\Action\Contacts::getUrl()?>">
                     <div class="col-2 p-0"><img class="img-fluid" src="/assets/img/connection/location.svg" alt="location"></div>
                     <div class="location_inner col-10 ps-2 pe-0 font08">
-                        <b>Находка</b> Находкинский проспект дом 12 офис 94
+                        <b>г. Находка</b> Находкинский проспект дом 12 офис 94
                     </div>
                 </a>
             </div>

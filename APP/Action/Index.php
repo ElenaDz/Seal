@@ -1,6 +1,7 @@
 <?php
 namespace APP\Action;
 
+use APP\Config\Main;
 use APP\Model\Products;
 use SYS\Views;
 
@@ -21,7 +22,7 @@ class Index extends _Base
 		);
 
 		self::showLayoutMain(
-			'Техно ЗПУ',
+			Main::getTitle(),
 			$content
 		);
 	}

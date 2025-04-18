@@ -78,6 +78,10 @@
   .navbar {
     min-height: 50px;
 
+    .navbar_inner {
+      padding: 5px 0;
+    }
+
     .location, .mail, .phone {
       display: block;
     }

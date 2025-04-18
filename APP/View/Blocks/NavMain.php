@@ -10,7 +10,7 @@ use APP\Entity\Product;
 <nav class="navbar p-0  navbar-expand-lg bg-body-tertiary">
 
     <div class="container">
-        <div class="p-2">
+        <div class="navbar_inner">
 
             <button class="navbar-toggler sandwich" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"></span>
@@ -69,9 +69,9 @@ use APP\Entity\Product;
                         <?php elseif ($contact->getType() === 'Mail'): ?>
 
                             <li class="nav-item mail">
-                                <a class="nav-link" href="mailto:<?= $contact->getHref()?>">
-                                    <b><?= $contact->getName() ?></b>
-                                </a>
+                                <div class="nav-link">
+                                    <?= $contact->getMail() ?>
+                                </div>
                             </li>
                         <?php endif; ?>
                     <?php endforeach; ?>
