@@ -32,19 +32,17 @@ use APP\Entity\Contact;
             </div>
         </div>
 
-        <?php foreach ($contacts as $contact): ?>
-            <?php if ($contact->getType() === 'Mail'):?>
+        <?php foreach (\APP\Config\Main::getMails() as $mail): ?>
 
-                <div class="row my-3">
-                    <div class="col-2 w-auto"><img class="float-end" src="/assets/img/connection/mail.svg" alt="" height="25px"></div>
-                    <!-- fixme для посетителя сайта после обфускации ни чего не должно измениться он должен видеть тоже, что было до обфускации ok-->
-                    <div class="col-10">
-                        <!-- fixme перенеси работу с обфускатором в класс сущности Contact ok-->
-                        <?= $contact->getMail() ?>
-                    </div>
+            <div class="row my-3">
+                <div class="col-2 w-auto"><img class="float-end" src="/assets/img/connection/mail.svg" alt="" height="25px"></div>
+                <!-- fixme для посетителя сайта после обфускации ни чего не должно измениться он должен видеть тоже, что было до обфускации ok-->
+                <div class="col-10">
+                    <!-- fixme перенеси работу с обфускатором в класс сущности Contact ok-->
+                    <?= $mail ?>
                 </div>
+            </div>
 
-            <?php endif; ?>
         <?php endforeach; ?>
 
         <div class="d-flex flex-column flex-sm-row justify-content-between py-2">

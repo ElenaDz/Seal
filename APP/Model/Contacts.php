@@ -12,7 +12,7 @@ class Contacts extends _Base
     public static function getAll(): array
     {
         $results = self::getPDO()->query(
-            'SELECT * FROM contacts'
+            'SELECT * FROM Contacts'
         );
 
         return $results->fetchAll(
@@ -23,10 +23,9 @@ class Contacts extends _Base
 
     public static function getByType($type)
     {
-		// fixme а где защита от sql иньекций ?
         $results = self::getPDO()->query(
-            'SELECT * FROM contacts
-                    where contacts.type = '.$type
+            'SELECT * FROM Contacts
+                    where Contacts.type = '.((string) $type)
         );
 
         return $results->fetchObject(

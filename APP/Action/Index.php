@@ -3,14 +3,13 @@ namespace APP\Action;
 
 use APP\Model\Products;
 use SYS\Views;
-
+use APP\Config\Main;
 class Index extends _Base
 {
 	public function __invoke()
 	{
         $products = Products::getAll();
         if (empty($products)) {
-            // fixme создать ошибку
 
         }
 
@@ -22,7 +21,7 @@ class Index extends _Base
 		);
 
 		self::showLayoutMain(
-			'Техно ЗПУ',
+            Main::getTitle(),
 			$content
 		);
 	}

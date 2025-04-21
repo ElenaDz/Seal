@@ -17,7 +17,7 @@ use APP\Entity\Product;
         <?php foreach ($products as $index => $product):  ?>
         <div class="carousel-item <?= $index === 0 ? 'active' : '';?>">
             <img src="/assets/img/carousel/background/washed_out/<?= $product->getId() ?>.jpg" class="d-block w-100" alt="<?= $product->getId() ?>">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-md-block">
                 <div class="carousel_seal_inner">
                     <a href="<?= \APP\Action\PageProduct::getUrl($product->getId()) ?>">
                         <img src="<?= $product->getCoverUrl()?>" class="carousel_seal" alt="фото продукта <?= $product->getTitle() ?>">

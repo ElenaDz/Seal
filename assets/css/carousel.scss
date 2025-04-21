@@ -38,3 +38,19 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .carousel {
+    .carousel-inner {
+
+      .carousel_seal_inner {
+        position: absolute;
+        right: -10%;
+        bottom: 100%;
+
+        .carousel_seal {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,8 @@
 use APP\Entity\Contact;
 
 /** @var Contact[] $contacts */
+
+$src_logo = \APP\Config\Main::isTehnomarket() ? '../../../assets/img/logo/zpu/logo-black.png' : '../../../assets/img/logo/dv/dv-black.png'
 ?>
 
 <div class="container">
@@ -13,10 +15,11 @@ use APP\Entity\Contact;
 
             <?php if ($_SERVER['REQUEST_URI'] !== \APP\Action\Index::getUrl()): ?>
                 <a href="<?= \APP\Action\Index::getUrl()?>">
-                    <img class="logo" src="../../../assets/img/logo/zpu/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+
+                    <img class="logo" src="<?= $src_logo?>" alt="<?= \APP\Config\Main::getTitle(); ?>">
                 </a>
             <?php else: ?>
-                <img class="logo" src="../../../assets/img/logo/zpu/logo-black.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                <img class="logo" src="<?= $src_logo?>" alt="<?= \APP\Config\Main::getTitle(); ?>">
             <?php endif;?>
         </div>
 
@@ -56,11 +59,8 @@ use APP\Entity\Contact;
             <div class="mail_wrap d-none d-sm-flex col-sm-4 col-xl-2 col-xxl-2 row align-items-center">
                 <div class="col-2 w-auto p-0"><img src="/assets/img/connection/mail.svg" class="top-icon" alt="mail"></div>
                 <div class="mail_inner col-10 ps-2 pe-0 font08">
-                    <?php foreach ($contacts as $contact): ?>
-                        <?php if ($contact->getType() === 'Mail'):?>
-
-                            <?= $contact->getMail() ?>
-                        <?php endif; ?>
+                    <?php foreach (\APP\Config\Main::getMails() as $mail): ?>
+                        <?= $mail; ?>
                     <?php endforeach; ?>
                 </div>
             </div>

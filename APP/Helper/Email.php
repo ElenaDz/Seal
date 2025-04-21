@@ -32,10 +32,10 @@ class Email
 		$mail->Port       = 587;
 
 		// здесь email кому отправлять это письмо например в нашем случае это может быть tehnomarket.nhk@yandex.ru
-		$mail->addAddress("tehnomarket.nhk@yandex.ru");
+		$mail->addAddress($to);
 
 		// здесь указать email с того же аккаунта, что выше был указан пароль, может совпадать с email to
-		$mail->setFrom("tehnomarket.nhk@yandex.ru");
+		$mail->setFrom($to);
 
 		$mail->isHTML(true);
 

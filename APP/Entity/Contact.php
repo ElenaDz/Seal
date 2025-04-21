@@ -2,6 +2,8 @@
 
 namespace APP\Entity;
 
+use APP\Config\Main;
+
 class Contact
 {
     private $id;
@@ -32,9 +34,15 @@ class Contact
 
     public function getMail()
     {
+        $name = $this->getName();
+
+        if ($name === "tehnomarket.nhk@yandex.ru") {
+            $name = Main::getMail();
+        }
+
         return \Kminek\EmailObfuscator::obfuscate(
-            $this->getHref(),
-            '<b>' . $this->getName() . '</b>'
+            $name,
+            '<b>' . $name . '</b>'
         );
     }
 }

@@ -6,6 +6,8 @@ use APP\Entity\Product;
 /** @var Product[] $products */
 /** @var Contact[] $contacts */
 
+$src_logo = \APP\Config\Main::isTehnomarket() ? '../../../assets/img/logo/zpu/logo-white.png' : '../../../assets/img/logo/dv/dv-white.png'
+
 // fixme в футоре блоки должны выстаиваться в столбик на мобильной версии с выравниванием по центру или слева ок
 ?>
 <div class="wrap_footer text-white">
@@ -14,7 +16,7 @@ use APP\Entity\Product;
             <div class="row inner_footer">
                 <div class="site_map">
                     <div class="me-2">
-                        <img class="logo" src="../../../assets/img/logo/zpu/logo-white.png" alt="<?= \APP\Config\Main::getTitle(); ?>">
+                        <img class="logo" src="<?= $src_logo?>" alt="<?= \APP\Config\Main::getTitle(); ?>">
                     </div>
 
                     <div class="product_wrap d-flex flex-wrap">
@@ -79,12 +81,8 @@ use APP\Entity\Product;
                     <div class="mail_wrap d-none d-sm-flex col-sm-4 mt-2 col-xl-2 col-xxl-2 row align-items-center">
                         <div class="col-2 w-auto p-0"><img src="/assets/img/connection/mail-wite.svg" class="top-icon" alt="mail"></div>
                         <div class="mail_inner col-10 ps-2 pe-0 font08">
-                            <?php foreach ($contacts as $contact): ?>
-                                <?php if ($contact->getType() === 'Mail'):?>
-
-                                    <?= $contact->getMail() ?>
-
-                                <?php endif; ?>
+                            <?php foreach (\APP\Config\Main::getMails() as $mail): ?>
+                                <?= $mail; ?>
                             <?php endforeach; ?>
                         </div>
                     </div>
